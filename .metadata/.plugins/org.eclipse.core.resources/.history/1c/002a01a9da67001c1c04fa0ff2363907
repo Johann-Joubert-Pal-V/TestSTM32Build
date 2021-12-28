@@ -4,23 +4,35 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/InitDeinit.c \
-../src/TestCrossGCC.c \
-../src/UnitTestmain.c 
+../CUnit/src/Automated.c \
+../CUnit/src/Basic.c \
+../CUnit/src/CUError.c \
+../CUnit/src/MyMem.c \
+../CUnit/src/TestDB.c \
+../CUnit/src/TestRun.c \
+../CUnit/src/Util.c 
 
 OBJS += \
-./src/InitDeinit.o \
-./src/TestCrossGCC.o \
-./src/UnitTestmain.o 
+./CUnit/src/Automated.o \
+./CUnit/src/Basic.o \
+./CUnit/src/CUError.o \
+./CUnit/src/MyMem.o \
+./CUnit/src/TestDB.o \
+./CUnit/src/TestRun.o \
+./CUnit/src/Util.o 
 
 C_DEPS += \
-./src/InitDeinit.d \
-./src/TestCrossGCC.d \
-./src/UnitTestmain.d 
+./CUnit/src/Automated.d \
+./CUnit/src/Basic.d \
+./CUnit/src/CUError.d \
+./CUnit/src/MyMem.d \
+./CUnit/src/TestDB.d \
+./CUnit/src/TestRun.d \
+./CUnit/src/Util.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/%.o: ../src/%.c src/subdir.mk
+CUnit/src/%.o: ../CUnit/src/%.c CUnit/src/subdir.mk
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
 	gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"

@@ -1,0 +1,322 @@
+13:35:44 **** Build of configuration Debug for project TestSTM32CubeGcc ****
+make -j8 all 
+'Building file: ../src/InitDeinit.c'
+'Building file: ../src/TestCrossGCC.c'
+'Building file: ../src/UnitTestmain.c'
+'Invoking: GCC C Compiler'
+gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InitDeinit.d" -MT"src/InitDeinit.o" -o "src/InitDeinit.o" "../src/InitDeinit.c"
+'Invoking: GCC C Compiler'
+'Invoking: GCC C Compiler'
+gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestCrossGCC.d" -MT"src/TestCrossGCC.o" -o "src/TestCrossGCC.o" "../src/TestCrossGCC.c"
+In file included from ../src/InitDeinit.c:1:
+../src/InitDeinit.h:15:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+ #endif _CMD_TEST_1
+        ^~~~~~~~~~~
+gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UnitTestmain.d" -MT"src/UnitTestmain.o" -o "src/UnitTestmain.o" "../src/UnitTestmain.c"
+In file included from ../src/TestCrossGCC.c:14:
+../src/UnitTestmain.h:6:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+ #endif _UNITTESTMAIN_
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/InitDeinit.c'
+'Building file: ../CUnit/src/Automated.c'
+'Building file: ../CUnit/src/Basic.c'
+In file included from ../src/UnitTestmain.c:3:
+../src/InitDeinit.h:15:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+ #endif _CMD_TEST_1
+        ^~~~~~~~~~~
+'Finished building: ../src/TestCrossGCC.c'
+' '
+'Invoking: GCC C Compiler'
+gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CUnit/src/Automated.d" -MT"CUnit/src/Automated.o" -o "CUnit/src/Automated.o" "../CUnit/src/Automated.c"
+'Invoking: GCC C Compiler'
+' '
+gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CUnit/src/Basic.d" -MT"CUnit/src/Basic.o" -o "CUnit/src/Basic.o" "../CUnit/src/Basic.c"
+'Finished building: ../src/UnitTestmain.c'
+' '
+'Building file: ../CUnit/src/CUError.c'
+'Building file: ../CUnit/src/MyMem.c'
+'Building file: ../CUnit/src/TestDB.c'
+'Invoking: GCC C Compiler'
+'Invoking: GCC C Compiler'
+gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CUnit/src/CUError.d" -MT"CUnit/src/CUError.o" -o "CUnit/src/CUError.o" "../CUnit/src/CUError.c"
+'Finished building: ../CUnit/src/Automated.c'
+'Invoking: GCC C Compiler'
+gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CUnit/src/MyMem.d" -MT"CUnit/src/MyMem.o" -o "CUnit/src/MyMem.o" "../CUnit/src/MyMem.c"
+'Finished building: ../CUnit/src/Basic.c'
+gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CUnit/src/TestDB.d" -MT"CUnit/src/TestDB.o" -o "CUnit/src/TestDB.o" "../CUnit/src/TestDB.c"
+' '
+'Finished building: ../CUnit/src/CUError.c'
+' '
+'Finished building: ../CUnit/src/MyMem.c'
+' '
+'Building file: ../CUnit/src/TestRun.c'
+' '
+'Building file: ../CUnit/src/Util.c'
+'Invoking: GCC C Compiler'
+gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CUnit/src/TestRun.d" -MT"CUnit/src/TestRun.o" -o "CUnit/src/TestRun.o" "../CUnit/src/TestRun.c"
+'Invoking: GCC C Compiler'
+gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CUnit/src/Util.d" -MT"CUnit/src/Util.o" -o "CUnit/src/Util.o" "../CUnit/src/Util.c"
+'Finished building: ../CUnit/src/TestDB.c'
+../CUnit/src/TestRun.c: In function 'CU_get_run_results_string':
+../CUnit/src/TestRun.c:614:29: warning: field width specifier '*' expects argument of type 'int', but argument 4 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                            ~^~
+../CUnit/src/TestRun.c:619:13:
+             width[0], _("Run Summary:"),
+             ~~~~~~~~         
+../CUnit/src/TestRun.c:614:32: warning: field width specifier '*' expects argument of type 'int', but argument 6 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                               ~^~
+../CUnit/src/TestRun.c:620:13:
+             width[1], _("Type"),
+             ~~~~~~~~            
+../CUnit/src/TestRun.c:614:35: warning: field width specifier '*' expects argument of type 'int', but argument 8 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                                  ~^~
+../CUnit/src/TestRun.c:621:13:
+             width[2], _("Total"),
+             ~~~~~~~~               
+../CUnit/src/TestRun.c:614:38: warning: field width specifier '*' expects argument of type 'int', but argument 10 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                                     ~^~
+../CUnit/src/TestRun.c:622:13:
+             width[3], _("Ran"),
+             ~~~~~~~~                  
+../CUnit/src/TestRun.c:614:41: warning: field width specifier '*' expects argument of type 'int', but argument 12 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                                        ~^~
+../CUnit/src/TestRun.c:623:13:
+             width[4], _("Passed"),
+             ~~~~~~~~                     
+../CUnit/src/TestRun.c:614:44: warning: field width specifier '*' expects argument of type 'int', but argument 14 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                                           ~^~
+../CUnit/src/TestRun.c:624:13:
+             width[5], _("Failed"),
+             ~~~~~~~~                        
+../CUnit/src/TestRun.c:614:47: warning: field width specifier '*' expects argument of type 'int', but argument 16 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                                              ~^~
+../CUnit/src/TestRun.c:625:13:
+             width[6], _("Inactive"),
+             ~~~~~~~~                           
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 18 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:626:13:
+             width[0], " ",
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:615:29: note: format string is defined here
+                           "%*s%*s%*u%*u%*s%*u%*u\n"   /* to change the calculation of */
+                            ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 20 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:627:13:
+             width[1], _("suites"),
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:615:32: note: format string is defined here
+                           "%*s%*s%*u%*u%*s%*u%*u\n"   /* to change the calculation of */
+                               ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 22 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:628:13:
+             width[2], pRegistry->uiNumberOfSuites,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:615:35: note: format string is defined here
+                           "%*s%*s%*u%*u%*s%*u%*u\n"   /* to change the calculation of */
+                                  ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 24 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:629:13:
+             width[3], pRunSummary->nSuitesRun,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:615:38: note: format string is defined here
+                           "%*s%*s%*u%*u%*s%*u%*u\n"   /* to change the calculation of */
+                                     ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 26 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:630:13:
+             width[4], _("n/a"),
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:615:41: note: format string is defined here
+                           "%*s%*s%*u%*u%*s%*u%*u\n"   /* to change the calculation of */
+                                        ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 28 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:631:13:
+             width[5], pRunSummary->nSuitesFailed,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:615:44: note: format string is defined here
+                           "%*s%*s%*u%*u%*s%*u%*u\n"   /* to change the calculation of */
+                                           ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 30 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:632:13:
+             width[6], pRunSummary->nSuitesInactive,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:615:47: note: format string is defined here
+                           "%*s%*s%*u%*u%*s%*u%*u\n"   /* to change the calculation of */
+                                              ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 32 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+' '
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:633:13:
+             width[0], " ",
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:616:29: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*u\n"   /* len above!                   */
+                            ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 34 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:634:13:
+             width[1], _("tests"),
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:616:32: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*u\n"   /* len above!                   */
+                               ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 36 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:635:13:
+             width[2], pRegistry->uiNumberOfTests,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:616:35: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*u\n"   /* len above!                   */
+                                  ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 38 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:636:13:
+             width[3], pRunSummary->nTestsRun,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:616:38: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*u\n"   /* len above!                   */
+                                     ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 40 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:637:13:
+             width[4], pRunSummary->nTestsRun - pRunSummary->nTestsFailed,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:616:41: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*u\n"   /* len above!                   */
+                                        ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 42 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:638:13:
+             width[5], pRunSummary->nTestsFailed,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:616:44: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*u\n"   /* len above!                   */
+                                           ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 44 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:639:13:
+             width[6], pRunSummary->nTestsInactive,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:616:47: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*u\n"   /* len above!                   */
+                                              ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 46 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:640:13:
+             width[0], " ",
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:617:29: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*s\n\n"
+                            ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 48 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:641:13:
+             width[1], _("asserts"),
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:617:32: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*s\n\n"
+                               ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 50 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:642:13:
+             width[2], pRunSummary->nAsserts,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:617:35: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*s\n\n"
+                                  ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 52 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:643:13:
+             width[3], pRunSummary->nAsserts,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:617:38: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*s\n\n"
+                                     ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 54 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:644:13:
+             width[4], pRunSummary->nAsserts - pRunSummary->nAssertsFailed,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:617:41: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*s\n\n"
+                                        ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 56 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:645:13:
+             width[5], pRunSummary->nAssertsFailed,
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:617:44: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*s\n\n"
+                                           ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 58 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:646:13:
+             width[6], _("n/a"),
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:617:47: note: format string is defined here
+                           "%*s%*s%*u%*u%*u%*u%*s\n\n"
+                                              ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 60 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:647:13:
+             width[7], _("Elapsed time = "), CU_get_elapsed_time(),  /* makes sure time is updated */
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:618:29: note: format string is defined here
+                           "%*s%8.3f%*s",
+                            ~^~
+../CUnit/src/TestRun.c:614:27: warning: field width specifier '*' expects argument of type 'int', but argument 63 has type 'size_t' {aka 'long long unsigned int'} [-Wformat=]
+     snprintf(result, len, "%*s%*s%*s%*s%*s%*s%*s\n"   /* if you change this, be sure  */
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+../CUnit/src/TestRun.c:648:13:
+             width[8], _(" seconds")
+             ~~~~~~~~       
+../CUnit/src/TestRun.c:618:37: note: format string is defined here
+                           "%*s%8.3f%*s",
+                                    ~^~
+'Finished building: ../CUnit/src/Util.c'
+' '
+'Finished building: ../CUnit/src/TestRun.c'
+' '
+'Building target: TestSTM32CubeGcc'
+'Invoking: MinGW C Linker'
+gcc -L"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\lib" -o "TestSTM32CubeGcc"  ./src/InitDeinit.o ./src/TestCrossGCC.o ./src/UnitTestmain.o  ./CUnit/src/Automated.o ./CUnit/src/Basic.o ./CUnit/src/CUError.o ./CUnit/src/MyMem.o ./CUnit/src/TestDB.o ./CUnit/src/TestRun.o ./CUnit/src/Util.o   
+'Finished building target: TestSTM32CubeGcc'
+' '
+
+13:35:49 Build Finished. 0 errors, 33 warnings. (took 4s.389ms)
+

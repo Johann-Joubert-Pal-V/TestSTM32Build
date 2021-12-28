@@ -1,0 +1,34 @@
+CUnit/src/Automated.o: ../CUnit/src/Automated.c \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/CUnit.h \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/CUError.h \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/CUnit.h \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/TestDB.h \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/TestRun.h \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/TestDB.h \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/MyMem.h \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/Util.h \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/TestRun.h \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/Automated.h \
+ C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/CUnit_intl.h
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/CUnit.h:
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/CUError.h:
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/CUnit.h:
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/TestDB.h:
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/TestRun.h:
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/TestDB.h:
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/MyMem.h:
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/Util.h:
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/TestRun.h:
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/Automated.h:
+
+C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr/CUnit_intl.h:
