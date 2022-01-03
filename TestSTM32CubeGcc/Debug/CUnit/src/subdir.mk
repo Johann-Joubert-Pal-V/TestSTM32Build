@@ -35,7 +35,7 @@ C_DEPS += \
 CUnit/src/%.o: ../CUnit/src/%.c CUnit/src/subdir.mk
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
-	gcc -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	${CC} -std=c11 -I"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\hdr" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

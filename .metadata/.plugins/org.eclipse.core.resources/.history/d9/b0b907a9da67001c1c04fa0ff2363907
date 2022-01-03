@@ -1,3 +1,0 @@
-src/TestCrossGCC.o: ../src/TestCrossGCC.c ../src/UnitTestmain.h
-
-../src/UnitTestmain.h:

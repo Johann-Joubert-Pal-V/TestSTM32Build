@@ -41,7 +41,7 @@ all: TestSTM32CubeGcc
 TestSTM32CubeGcc: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MinGW C Linker'
-	gcc -L"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\lib" -o "TestSTM32CubeGcc" $(OBJS) $(USER_OBJS) $(LIBS)
+	${CC} -L"C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeGcc\CUnit\lib" -o "TestSTM32CubeGcc" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;TestSTM32CubeGcc/Debug/TestSTM32CubeGcc.exe&apos;" deleteContents="false" description="Delete resource &apos;TestSTM32CubeGcc/Debug/TestSTM32CubeGcc.exe&apos;" element1="/TestSTM32CubeGcc/Debug/TestSTM32CubeGcc.exe" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1640694902454"/>&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/TestSTM32CubeGcc/Debug/CUnit" element2="/TestSTM32CubeGcc/Debug/src" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1640694937867"/>
-</session>
