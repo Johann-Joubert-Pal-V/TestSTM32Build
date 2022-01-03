@@ -5,3 +5,7 @@
 
 *.exe
 
+
+.metadata/
+
+TestSTM32CubeGcc/Debug/cov_html_output/
