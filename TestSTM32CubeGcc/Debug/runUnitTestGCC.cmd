@@ -2,14 +2,14 @@
 
 REM PC-LINT Configuration
 set PC_LINT_LOC=C:\PC-Lint\windows\config\
-set PC_LINT_PROJECT_CONFIG=.\PROJECT_CONFIG.LNT
+set PC_LINT_PROJECT_CONFIG=PROJECT_CONFIG.LNT
 REM Temporary filename for imposter log
 set IMPOSTER_LOG=C:\Users\Johann428\AppData\Local\Temp\imposter_log.txt
-set PC_LINT_ANALYSIS_FILE=.\analysis.log
+set PC_LINT_ANALYSIS_FILE=analysis.log
 
 REM BULLSEYE CONFIGURATION
 set BULLSEYE_LOC=C:\BullseyeCoverage\BullseyeCoverage\bin\
-set COVFILE=.\Test.cov
+set COVFILE=Test.cov
 set COV_HTML_OUTPUT=.\cov_html_output
 
 
@@ -33,17 +33,17 @@ REM Pass commandline parameters to either clean files, build coverage report, pc
 
 
 REM clean upfiles
-del %IMPOSTER_LOG%
-del ".\TestSTM32CubeGcc.lnt"
-del ".\analysis.log"
+del %PC_LINT_PROJECT_CONFIG%
+del %PC_LINT_ANALYSIS_FILE%
 REM del %PROJECT_CONFIG%
 
-rmdir /s /q .\cov_html_output
+REM rmdir /s /q %COV_HTML_OUTPUT%
 
 make -e CC=%PC_LINT_LOC%imposter.exe -B TestSTM32CubeGcc
 
 %PC_LINT_LOC%pclp_config.py --compiler=gcc --imposter-file=%IMPOSTER_LOG% --config-output-lnt-file=%PC_LINT_PROJECT_CONFIG% --generate-project-config
 pclp64 -os(%PC_LINT_ANALYSIS_FILE%) co-gcc.lnt C:\PC-Lint\windows\lnt\env-jenkins.lnt %PC_LINT_PROJECT_CONFIG%
+del %IMPOSTER_LOG%
 
 
 %BULLSEYE_LOC%cov01 --on
