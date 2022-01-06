@@ -13,8 +13,9 @@ export PC_LINT_ANALYSIS_FILE=./analysis.log
 #Bullseye Configuration
 export BULLSEYE_LOC=/opt/BullseyeCoverage/bin
 export COVFILE=Test.cov
-export COV_HTML_OUTPUT=.\cov_html_output
-
+export COV_HTML_OUTPUT=./cov_html_output
+export COVERAGE_XML_REPORT=./coverage.xml
+export COVERAGE_XSL_FILE=./coverage.xsl
 
 
 echo $PC_LINT_LOC
@@ -26,7 +27,9 @@ echo $PC_LINT_ANALYSIS_FILE
 rm $PC_LINT_PROJECT_CONFIG
 rm $PC_LINT_ANALYSIS_FILE
 rm $IMPOSTER_LOG
-# rm $COVFILE
+rm $COVFILE
+rm $COVERAGE_XML_REPORT
+rm $COVERAGE_XSL_FILE
 #del %PROJECT_CONFIG%
 
 make clean
@@ -34,8 +37,8 @@ make clean
 make -e CC=./imposter -B TestSTM32CubeGcc
 
 python3 $PC_LINT_LOC/pclp_config.py --compiler=gcc --imposter-file=$IMPOSTER_LOG --config-output-lnt-file=$PC_LINT_PROJECT_CONFIG --generate-project-config
-#pclp64_linux -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt /opt/PC-LINT/lnt/env-jenkins.lnt $PC_LINT_PROJECT_CONFIG
-/opt/PC-LINT/pclp64_linux co-gcc.lnt $PC_LINT_PROJECT_CONFIG
+/opt/PC-LINT/pclp64_linux -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt /opt/PC-LINT/lnt/env-jenkins.lnt $PC_LINT_PROJECT_CONFIG
+#/opt/PC-LINT/pclp64_linux co-gcc.lnt $PC_LINT_PROJECT_CONFIG
 
 #del %IMPOSTER_LOG%
 
@@ -46,5 +49,5 @@ make -e CC="$BULLSEYE_LOC/covc -i $BULLSEYE_LOC/gcc" -B TestSTM32CubeGcc
 ./TestSTM32CubeGcc xml out
 $BULLSEYE_LOC/cov01 --off
 echo START BULLSEYE HTML REPORT
-/opt/BullseyeCoverage/bin/covhtml --file ./Test.cov ./cov_html_output/
+/opt/BullseyeCoverage/bin/covxml --xsl --file $COVFILE -o $COVERAGE_XML_REPORT
 echo STOP BULLSEYE HTML REPORT
