@@ -1,6 +1,6 @@
-/* Compiler configuration for gcc 8.1.0.
+/* Compiler configuration for gcc 10.2.1.
    Using the options:  
-   Generated on 2021-12-28 15:01:49 with pclp_config version 1.4.
+   Generated on 2022-01-06 09:38:38 with pclp_config version 1.4.
  */
 
 // Base Options
@@ -58,21 +58,23 @@
 // Transformed compiler options
 
 // Size Options
--si4 -sl4 -sll8 -ss2 -sw2 -sp8 -sf4 -sd8 -sld16 +fzl ++fzl
+-si4 -sl8 -sll8 -ss2 -sw4 -sp8 -sf4 -sd8 -sld16 +fzl ++fzl
 
 // Include Options
---i"C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"
-+libdir("C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++")
---i"C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"
-+libdir("C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32")
---i"C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"
-+libdir("C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward")
---i"C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"
-+libdir("C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include")
---i"C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"
-+libdir("C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed")
---i"C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
-+libdir("C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include")
+--i"/usr/include/c++/10"
++libdir("/usr/include/c++/10")
+--i"/usr/include/x86_64-linux-gnu/c++/10"
++libdir("/usr/include/x86_64-linux-gnu/c++/10")
+--i"/usr/include/c++/10/backward"
++libdir("/usr/include/c++/10/backward")
+--i"/usr/lib/gcc/x86_64-linux-gnu/10/include"
++libdir("/usr/lib/gcc/x86_64-linux-gnu/10/include")
+--i"/usr/local/include"
++libdir("/usr/local/include")
+--i"/usr/include/x86_64-linux-gnu"
++libdir("/usr/include/x86_64-linux-gnu")
+--i"/usr/include"
++libdir("/usr/include")
 
 +libh(co-gcc.h)
 -header(co-gcc.h)

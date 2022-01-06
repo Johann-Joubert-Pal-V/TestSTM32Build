@@ -1,0 +1,50 @@
+#!/bin/bash
+
+echo "set PC-LINT configuration"
+
+#PC LINT CONFIGURATION
+export PC_LINT_LOC=/opt/PC-LINT/config
+export PC_LINT_PROJECT_CONFIG=./PROJECT_CONFIG.LNT
+
+#Temporary filename for imposter log
+export IMPOSTER_LOG=./imposter_log.txt
+export PC_LINT_ANALYSIS_FILE=./analysis.log
+
+#Bullseye Configuration
+export BULLSEYE_LOC=/opt/BullseyeCoverage/bin
+export COVFILE=Test.cov
+export COV_HTML_OUTPUT=.\cov_html_output
+
+
+
+echo $PC_LINT_LOC
+echo $PC_LINT_PROJECT_CONFIG
+echo $IMPOSTER_LOG
+echo $PC_LINT_ANALYSIS_FILE
+
+#cleanup files
+rm $PC_LINT_PROJECT_CONFIG
+rm $PC_LINT_ANALYSIS_FILE
+rm $IMPOSTER_LOG
+# rm $COVFILE
+#del %PROJECT_CONFIG%
+
+make clean
+#make -e CC=$PC_LINT_LOC/imposter -B TestSTM32CubeGcc
+make -e CC=./imposter -B TestSTM32CubeGcc
+
+python3 $PC_LINT_LOC/pclp_config.py --compiler=gcc --imposter-file=$IMPOSTER_LOG --config-output-lnt-file=$PC_LINT_PROJECT_CONFIG --generate-project-config
+#pclp64_linux -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt /opt/PC-LINT/lnt/env-jenkins.lnt $PC_LINT_PROJECT_CONFIG
+pclp64_linux co-gcc.lnt $PC_LINT_PROJECT_CONFIG
+
+#del %IMPOSTER_LOG%
+
+
+
+$BULLSEYE_LOC/cov01 --on
+make -e CC="$BULLSEYE_LOC/covc -i $BULLSEYE_LOC/gcc" -B TestSTM32CubeGcc
+./TestSTM32CubeGcc xml out
+$BULLSEYE_LOC/cov01 --off
+echo START BULLSEYE HTML REPORT
+/opt/BullseyeCoverage/bin/covhtml --file ./Test.cov ./cov_html_output/
+echo STOP BULLSEYE HTML REPORT
