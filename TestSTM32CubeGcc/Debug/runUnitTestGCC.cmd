@@ -10,7 +10,7 @@ set PC_LINT_ANALYSIS_FILE=analysis.log
 REM BULLSEYE CONFIGURATION
 set BULLSEYE_LOC=C:\BullseyeCoverage\BullseyeCoverage\bin\
 set COVFILE=Test.cov
-set COV_HTML_OUTPUT=.\cov_html_output
+set COV_HTML_OUTPUT=cov_html_output
 
 
 REM disable local echo of commands, display output only.
@@ -57,5 +57,5 @@ REM covselect --file "%COVFILE%" --add c:
 echo "START HTML REPORT"
 REM C:\Git\BuildServer\BullsEyeTest\bullshtml\bullshtml.exe -f %COVFILE% -e UTF_8 %COV_HTML_OUTPUT%
 C:\BullseyeCoverage\BullseyeCoverage\bin\covhtml.exe --file %COVFILE% %COV_HTML_OUTPUT%
-C:\BullseyeCoverage\BullseyeCoverage\bin\covxml.exe --xsl --file %COVFILE% -o /%COV_HTML_OUTPUT%/clover.xml
+C:\BullseyeCoverage\BullseyeCoverage\bin\covxml.exe --xsl --file %COVFILE% -o %COV_HTML_OUTPUT%/clover.xml
 echo "END HTML REPORT"
