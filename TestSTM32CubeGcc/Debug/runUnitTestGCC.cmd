@@ -4,7 +4,7 @@ REM PC-LINT Configuration
 set PC_LINT_LOC=C:\PC-Lint\windows\config\
 set PC_LINT_PROJECT_CONFIG=PROJECT_CONFIG.LNT
 REM Temporary filename for imposter log
-set IMPOSTER_LOG=C:\Users\Johann428\AppData\Local\Temp\imposter_log.txt
+set IMPOSTER_LOG=imposter_log.txt
 set PC_LINT_ANALYSIS_FILE=analysis.log
 
 REM BULLSEYE CONFIGURATION
@@ -35,15 +35,16 @@ REM Pass commandline parameters to either clean files, build coverage report, pc
 REM clean upfiles
 del %PC_LINT_PROJECT_CONFIG%
 del %PC_LINT_ANALYSIS_FILE%
+del %COVFILE%
 REM del %PROJECT_CONFIG%
 
-REM rmdir /s /q %COV_HTML_OUTPUT%
+rmdir /s /q %COV_HTML_OUTPUT%
 
 make -e CC=%PC_LINT_LOC%imposter.exe -B TestSTM32CubeGcc
 
 %PC_LINT_LOC%pclp_config.py --compiler=gcc --imposter-file=%IMPOSTER_LOG% --config-output-lnt-file=%PC_LINT_PROJECT_CONFIG% --generate-project-config
 pclp64 -os(%PC_LINT_ANALYSIS_FILE%) co-gcc.lnt C:\PC-Lint\windows\lnt\env-jenkins.lnt %PC_LINT_PROJECT_CONFIG%
-del %IMPOSTER_LOG%
+REM TEMP del %IMPOSTER_LOG%
 
 
 %BULLSEYE_LOC%cov01 --on
@@ -54,5 +55,7 @@ make -e CC="%BULLSEYE_LOC%covc.exe -i %BULLSEYE_LOC%gcc.exe" -B TestSTM32CubeGcc
 REM TODO add coverage regions inclusion/exclusion to remove CUNIT files.
 REM covselect --file "%COVFILE%" --add c:
 echo "START HTML REPORT"
-C:\Git\BuildServer\BullsEyeTest\bullshtml\bullshtml.exe -f %COVFILE% -e UTF_8 %COV_HTML_OUTPUT%
+REM C:\Git\BuildServer\BullsEyeTest\bullshtml\bullshtml.exe -f %COVFILE% -e UTF_8 %COV_HTML_OUTPUT%
+C:\BullseyeCoverage\BullseyeCoverage\bin\covhtml.exe --file %COVFILE% %COV_HTML_OUTPUT%
+C:\BullseyeCoverage\BullseyeCoverage\bin\covxml.exe --xsl --file %COVFILE% -o /%COV_HTML_OUTPUT%/clover.xml
 echo "END HTML REPORT"
