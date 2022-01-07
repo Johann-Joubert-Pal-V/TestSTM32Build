@@ -56,5 +56,6 @@ REM TODO add coverage regions inclusion/exclusion to remove CUNIT files.
 REM covselect --file "%COVFILE%" --add c:
 echo "START HTML REPORT"
 REM C:\Git\BuildServer\BullsEyeTest\bullshtml\bullshtml.exe -f %COVFILE% -e UTF_8 %COV_HTML_OUTPUT%
-C:\BullseyeCoverage\BullseyeCoverage\bin\covxml.exe --xsl --file %COVFILE% -o clover.xml
+C:\BullseyeCoverage\BullseyeCoverage\bin\covhtml.exe --file %COVFILE% %COV_HTML_OUTPUT%
+C:\BullseyeCoverage\BullseyeCoverage\bin\covxml.exe --xsl --file %COVFILE% -o /%COV_HTML_OUTPUT%/clover.xml
 echo "END HTML REPORT"
