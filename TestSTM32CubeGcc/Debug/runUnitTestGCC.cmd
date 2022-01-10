@@ -2,7 +2,7 @@
 
 REM PC-LINT Configuration
 set PC_LINT_LOC=C:\PC-Lint\windows\config\
-set PC_LINT_PROJECT_CONFIG=PROJECT_CONFIG.LNT
+set PC_LINT_PROJECT_CONFIG=project_config.lnt
 REM Temporary filename for imposter log
 set IMPOSTER_LOG=imposter_log.txt
 set PC_LINT_ANALYSIS_FILE=analysis.log
@@ -55,7 +55,7 @@ make -e CC="%BULLSEYE_LOC%covc.exe -i %BULLSEYE_LOC%gcc.exe" -B TestSTM32CubeGcc
 REM TODO add coverage regions inclusion/exclusion to remove CUNIT files.
 REM covselect --file "%COVFILE%" --add c:
 echo "START HTML REPORT"
-REM C:\Git\BuildServer\BullsEyeTest\bullshtml\bullshtml.exe -f %COVFILE% -e UTF_8 %COV_HTML_OUTPUT%
-C:\BullseyeCoverage\BullseyeCoverage\bin\covhtml.exe --file %COVFILE% %COV_HTML_OUTPUT%
-C:\BullseyeCoverage\BullseyeCoverage\bin\covxml.exe --xsl --file %COVFILE% -o %COV_HTML_OUTPUT%/clover.xml
+C:\Git\BuildServer\BullsEyeTest\bullshtml\bullshtml.exe -f %COVFILE% -e UTF_8 %COV_HTML_OUTPUT%
+REM C:\BullseyeCoverage\BullseyeCoverage\bin\covhtml.exe --file %COVFILE% %COV_HTML_OUTPUT%
+REM C:\BullseyeCoverage\BullseyeCoverage\bin\covxml.exe --xsl --file %COVFILE% -o %COV_HTML_OUTPUT%/clover.xml
 echo "END HTML REPORT"
