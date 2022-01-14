@@ -44,9 +44,10 @@ make clean
 #make -e CC=$PC_LINT_LOC/imposter -B TestSTM32CubeGcc
 make -e CC=./imposter -B TestSTM32CubeGcc
 
-pip3 install regex
-pip3 install pyyaml
-python3 $PC_LINT_LOC/pclp_config.py --compiler=gcc --imposter-file=$IMPOSTER_LOG --config-output-lnt-file=$PC_LINT_PROJECT_CONFIG --generate-project-config
+
+pipenv run /opt/PC-LINT/config/pclp_config.py --compiler=gcc --imposter-file=$IMPOSTER_LOG --config-output-lnt-file=$PC_LINT_PROJECT_CONFIG --generate-project-config
+
+#python3 $PC_LINT_LOC/pclp_config.py --compiler=gcc --imposter-file=$IMPOSTER_LOG --config-output-lnt-file=$PC_LINT_PROJECT_CONFIG --generate-project-config
 /opt/PC-LINT/pclp64_linux -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt env-jenkins.lnt $PC_LINT_PROJECT_CONFIG
 
 
