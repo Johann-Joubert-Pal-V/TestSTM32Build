@@ -35,6 +35,9 @@ rm $IMPOSTER_LOG
 
 rm -rf /s /q %COV_HTML_OUTPUT%
 
+pipenv run pip3 install regex
+pipenv run pip3 install pyyaml
+
 #Generate PC-LINT compiler configuration
 pipenv run $PC_LINT_LOC/pclp_config.py --compiler=gcc --compiler-bin=/usr/bin/gcc --config-output-lnt-file=co-gcc.lnt --config-output-header-file=co-gcc.h --generate-compiler-config
 #Compile PC-LINT imposter compiler
