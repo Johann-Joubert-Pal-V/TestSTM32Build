@@ -4,6 +4,7 @@ echo "set PC-LINT configuration"
 
 #PC LINT CONFIGURATION
 export PC_LINT_LOC=/opt/PC-LINT/config
+export PC_LINT_LNT_LOC=/opt/PC-LINT/lnt
 export PC_LINT_PROJECT_CONFIG=./project_config.lnt
 
 #Temporary filename for imposter log
@@ -29,9 +30,15 @@ rm $PC_LINT_PROJECT_CONFIG
 rm $PC_LINT_ANALYSIS_FILE
 rm $IMPOSTER_LOG
 rm $COVFILE
+rm $IMPOSTER_LOG
 #del %PROJECT_CONFIG%
 
-#rm rm -rf /s /q %COV_HTML_OUTPUT%
+rm -rf /s /q %COV_HTML_OUTPUT%
+
+#Generate PC-LINT compiler configuration
+$PC_LINT_LOC/pclp_config.py --compiler=gcc --compiler-bin=/usr/bin/gcc --config-output-lnt-file=co-gcc.lnt --config-output-header-file=co-gcc.h --generate-compiler-config
+#Compile PC-LINT imposter compiler
+gcc $PC_LINT_LOC/imposter.c -o imposter 
 
 make clean
 #make -e CC=$PC_LINT_LOC/imposter -B TestSTM32CubeGcc
@@ -40,7 +47,7 @@ make -e CC=./imposter -B TestSTM32CubeGcc
 python3 $PC_LINT_LOC/pclp_config.py --compiler=gcc --imposter-file=$IMPOSTER_LOG --config-output-lnt-file=$PC_LINT_PROJECT_CONFIG --generate-project-config
 /opt/PC-LINT/pclp64_linux -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt /opt/PC-LINT/lnt/env-jenkins.lnt $PC_LINT_PROJECT_CONFIG
 
-#del %IMPOSTER_LOG%
+
 
 
 

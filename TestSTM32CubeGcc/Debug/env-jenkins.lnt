@@ -1,0 +1,11 @@
+//-v // turn off verbosity
+-width(0) // don't insert line breaks (unlimited output width)
+-format="%f(%l): %t %n: %m"
+-h1 // The height of a message should be 1
+-A=C90 //PAL-V
+-w3 //PAL-V
+-max_threads=4
+//-fff
+//+lnt(C:\PC-Lint\windows\lnt\au-misra3.lnt,C:\PC-Lint\windows\lnt\au-misra3-amd1.lnt,C:\PC-Lint\windows\lnt\au-misra3-amd2.lnt)
+//+misra_interpret(c2012)
+//-os(analysis.log)

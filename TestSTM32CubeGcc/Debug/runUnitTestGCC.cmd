@@ -2,6 +2,7 @@
 
 REM PC-LINT Configuration
 set PC_LINT_LOC=C:\PC-Lint\windows\config\
+set PC_LINT_LNT_LOC=C:\PC-Lint\windows\lnt\
 set PC_LINT_PROJECT_CONFIG=project_config.lnt
 REM Temporary filename for imposter log
 set IMPOSTER_LOG=imposter_log.txt
@@ -36,15 +37,25 @@ REM clean upfiles
 del %PC_LINT_PROJECT_CONFIG%
 del %PC_LINT_ANALYSIS_FILE%
 del %COVFILE%
+del %IMPOSTER_LOG%
 REM del %PROJECT_CONFIG%
 
 rmdir /s /q %COV_HTML_OUTPUT%
 
-make -e CC=%PC_LINT_LOC%imposter.exe -B TestSTM32CubeGcc
+REM Generate PC-LINT compiler configuration
+%PC_LINT_LOC%pclp_config.py --compiler=gcc --compiler-bin=C:\mingw\mingw64\bin\gcc --config-output-lnt-file=co-gcc.lnt --config-output-header-file=co-gcc.h --generate-compiler-config
+REM Compile PC-LINT imposter compiler
+gcc %PC_LINT_LOC%imposter.c -o imposter 
 
+REM Use PC-LINT imposter compiler to compile project
+make -e CC=imposter.exe -B TestSTM32CubeGcc
+
+REM Generate the PC-LINT project configuration
 %PC_LINT_LOC%pclp_config.py --compiler=gcc --imposter-file=%IMPOSTER_LOG% --config-output-lnt-file=%PC_LINT_PROJECT_CONFIG% --generate-project-config
-pclp64 -os(%PC_LINT_ANALYSIS_FILE%) co-gcc.lnt C:\PC-Lint\windows\lnt\env-jenkins.lnt %PC_LINT_PROJECT_CONFIG%
-REM TEMP del %IMPOSTER_LOG%
+REM Use the PC-LINT compiler, jenkins and project configuration to LINT the project files
+pclp64 -max_threads=4 -os(%PC_LINT_ANALYSIS_FILE%) co-gcc.lnt env-jenkins.lnt %PC_LINT_LNT_LOC%au-misra3.lnt %PC_LINT_LNT_LOC%au-misra3-amd1.lnt %PC_LINT_LNT_LOC%au-misra3-amd2.lnt %PC_LINT_PROJECT_CONFIG%
+REM pclp64 -max_threads=4 -wlib(0) -os(%PC_LINT_ANALYSIS_FILE%) co-gcc.lnt C:\PC-Lint\windows\lnt\env-jenkins.lnt %PC_LINT_PROJECT_CONFIG%
+
 
 
 %BULLSEYE_LOC%cov01 --on
