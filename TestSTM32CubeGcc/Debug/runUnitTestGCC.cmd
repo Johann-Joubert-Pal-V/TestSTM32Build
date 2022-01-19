@@ -71,9 +71,9 @@ make -e CC="%BULLSEYE_LOC%covc.exe -i %BULLSEYE_LOC%gcc.exe" -B TestSTM32CubeGcc
 REM TODO add coverage regions inclusion/exclusion to remove CUNIT files.
 REM covselect --file "%COVFILE%" --add c:
 REM covselect --file "%COVFILE%" --import .\BullseyeCoverageExclusions
-covselect --file "%COVFILE%" --list
+echo covselect --file "%COVFILE%" --list
 covselect --file "%COVFILE%" --add "!..\CUnit\"
-covselect --file "%COVFILE%" --list
+echo covselect --file "%COVFILE%" --list
 echo "START HTML REPORT"
 C:\Git\BuildServer\BullsEyeTest\bullshtml\bullshtml.exe -f %COVFILE% -e UTF_8 %COV_HTML_OUTPUT%
 REM C:\BullseyeCoverage\BullseyeCoverage\bin\covhtml.exe --file %COVFILE% %COV_HTML_OUTPUT%
