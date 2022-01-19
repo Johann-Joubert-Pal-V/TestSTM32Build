@@ -4,6 +4,9 @@ REM PC-LINT Configuration
 set PC_LINT_LOC=C:\PC-Lint\windows\config\
 set PC_LINT_LNT_LOC=C:\PC-Lint\windows\lnt\
 set PC_LINT_PROJECT_CONFIG=project_config.lnt
+
+set PC_LINT_LIB_EXCLUDE=C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include/*
+
 REM Temporary filename for imposter log
 set IMPOSTER_LOG=imposter_log.txt
 set PC_LINT_ANALYSIS_FILE=analysis.log
@@ -53,8 +56,8 @@ make -e CC=imposter.exe -B TestSTM32CubeGcc
 REM Generate the PC-LINT project configuration
 %PC_LINT_LOC%pclp_config.py --compiler=gcc --imposter-file=%IMPOSTER_LOG% --config-output-lnt-file=%PC_LINT_PROJECT_CONFIG% --generate-project-config
 REM Use the PC-LINT compiler, jenkins and project configuration to LINT the project files
-pclp64 -max_threads=4 -os(%PC_LINT_ANALYSIS_FILE%) co-gcc.lnt env-jenkins.lnt %PC_LINT_LNT_LOC%au-misra3.lnt %PC_LINT_LNT_LOC%au-misra3-amd1.lnt %PC_LINT_LNT_LOC%au-misra3-amd2.lnt %PC_LINT_PROJECT_CONFIG%
-REM pclp64 -max_threads=4 -wlib(0) -os(%PC_LINT_ANALYSIS_FILE%) co-gcc.lnt C:\PC-Lint\windows\lnt\env-jenkins.lnt %PC_LINT_PROJECT_CONFIG%
+pclp64 -max_threads=4 -os(%PC_LINT_ANALYSIS_FILE%) -vf co-gcc.lnt env-jenkins.lnt %PC_LINT_PROJECT_CONFIG% %PC_LINT_LNT_LOC%au-misra3.lnt %PC_LINT_LNT_LOC%au-misra3-amd1.lnt %PC_LINT_LNT_LOC%au-misra3-amd2.lnt 
+REM pclp64 -max_threads=4 -os(%PC_LINT_ANALYSIS_FILE%) -vf co-gcc.lnt C:\PC-Lint\windows\lnt\env-jenkins.lnt %PC_LINT_PROJECT_CONFIG%
 
 
 

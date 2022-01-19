@@ -49,8 +49,8 @@ make -e CC=./imposter -B TestSTM32CubeGcc
 
 
 pipenv run $PC_LINT_LOC/pclp_config.py --compiler=gcc --imposter-file=$IMPOSTER_LOG --config-output-lnt-file=$PC_LINT_PROJECT_CONFIG --generate-project-config
-#/opt/PC-LINT/pclp64_linux -max_threads=4 -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt env-jenkins.lnt $PC_LINT_LNT_LOC/au-misra3.lnt $PC_LINT_LNT_LOC/au-misra3-amd1.lnt $PC_LINT_LNT_LOC/au-misra3-amd2.lnt $PC_LINT_PROJECT_CONFIG
-/opt/PC-LINT/pclp64_linux -max_threads=4 -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt env-jenkins.lnt $PC_LINT_PROJECT_CONFIG
+/opt/PC-LINT/pclp64_linux -max_threads=4 -os=$PC_LINT_ANALYSIS_FILE -vf co-gcc.lnt env-jenkins.lnt $PC_LINT_PROJECT_CONFIG $PC_LINT_LNT_LOC/au-misra3.lnt $PC_LINT_LNT_LOC/au-misra3-amd1.lnt $PC_LINT_LNT_LOC/au-misra3-amd2.lnt 
+#/opt/PC-LINT/pclp64_linux -max_threads=4 -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt env-jenkins.lnt $PC_LINT_PROJECT_CONFIG
 
 
 $BULLSEYE_LOC/cov01 --on
