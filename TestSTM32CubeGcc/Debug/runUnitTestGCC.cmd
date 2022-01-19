@@ -55,9 +55,11 @@ make -e CC=imposter.exe -B TestSTM32CubeGcc
 
 REM Generate the PC-LINT project configuration
 %PC_LINT_LOC%pclp_config.py --compiler=gcc --imposter-file=%IMPOSTER_LOG% --config-output-lnt-file=%PC_LINT_PROJECT_CONFIG% --generate-project-config
+
 REM Use the PC-LINT compiler, jenkins and project configuration to LINT the project files
-pclp64 -max_threads=4 -os(%PC_LINT_ANALYSIS_FILE%) -vf co-gcc.lnt env-jenkins.lnt %PC_LINT_PROJECT_CONFIG% %PC_LINT_LNT_LOC%au-misra3.lnt %PC_LINT_LNT_LOC%au-misra3-amd1.lnt %PC_LINT_LNT_LOC%au-misra3-amd2.lnt 
-REM pclp64 -max_threads=4 -os(%PC_LINT_ANALYSIS_FILE%) -vf co-gcc.lnt C:\PC-Lint\windows\lnt\env-jenkins.lnt %PC_LINT_PROJECT_CONFIG%
+REM pclp64 -max_threads=4 -os(%PC_LINT_ANALYSIS_FILE%) -vf co-gcc.lnt env-jenkins.lnt %PC_LINT_PROJECT_CONFIG% %PC_LINT_LNT_LOC%au-misra3.lnt %PC_LINT_LNT_LOC%au-misra3-amd1.lnt %PC_LINT_LNT_LOC%au-misra3-amd2.lnt 
+REM pclp64 -max_threads=4 -os(%PC_LINT_ANALYSIS_FILE%) -vf co-gcc.lnt project-config_eclipse.lnt %PC_LINT_PROJECT_CONFIG%
+
 
 
 
@@ -68,6 +70,8 @@ make -e CC="%BULLSEYE_LOC%covc.exe -i %BULLSEYE_LOC%gcc.exe" -B TestSTM32CubeGcc
 
 REM TODO add coverage regions inclusion/exclusion to remove CUNIT files.
 REM covselect --file "%COVFILE%" --add c:
+REM covselect --file "%COVFILE%" --import .\BullseyeCoverageExclusions
+covselect --file "%COVFILE%" --add "!..\CUnit\"
 echo "START HTML REPORT"
 C:\Git\BuildServer\BullsEyeTest\bullshtml\bullshtml.exe -f %COVFILE% -e UTF_8 %COV_HTML_OUTPUT%
 REM C:\BullseyeCoverage\BullseyeCoverage\bin\covhtml.exe --file %COVFILE% %COV_HTML_OUTPUT%
