@@ -17,28 +17,18 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#ifdef TESTING
+#include <UnitTestmain.h>
+#include <stdio.h>
+#else
 #include "main.h"
+
+
+//#define TESTING
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-/* USER CODE END Includes */
-
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
 
 SPI_HandleTypeDef hspi1;
@@ -64,16 +54,25 @@ static void MX_USB_PCD_Init(void);
 
 /* USER CODE END 0 */
 
+#endif
+
 /**
   * @brief  The application entry point.
   * @retval int
   */
-int main(void)
+int main(int argc, char* argv[])
 {
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
 
+#ifdef TESTING
+		//ADD TESTING FUNCTIONS
+//	char * outputs = {"xml","out"};
+//
+	test_main(argc, argv);
+	printf("TEST APPLICATION %d, %s",argc,argv[1]);
+#else
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
@@ -108,7 +107,10 @@ int main(void)
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
+#endif
 }
+
+#ifndef TESTING
 
 /**
   * @brief System Clock Configuration
@@ -340,6 +342,8 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
+
+#endif
 
 #ifdef  USE_FULL_ASSERT
 /**
