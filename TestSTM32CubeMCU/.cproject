@@ -173,7 +173,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.959555721." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.debug.1264067740" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.debug">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.225704108" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
-							<builder buildPath="${workspace_loc:/TestSTM32CubeMCU}/testing2" command="make" id="cdt.managedbuild.builder.gnu.cross.351863128" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="4" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/TestSTM32CubeMCU}/testing2" command="make" id="cdt.managedbuild.builder.gnu.cross.351863128" keepEnvironmentInBuildfile="true" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="4" superClass="cdt.managedbuild.builder.gnu.cross"/>
 							<tool command="${CC}" id="cdt.managedbuild.tool.gnu.cross.c.compiler.223227653" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.1794441040" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option defaultValue="gnu.c.debugging.level.max" id="gnu.c.compiler.option.debugging.level.1171604833" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
@@ -227,6 +227,7 @@
 		<configuration configurationName="Unit_Testing2">
 			<resource resourceType="PROJECT" workspacePath="/TestSTM32CubeMCU"/>
 		</configuration>
+		<configuration configurationName="UnitTesting"/>
 		<configuration configurationName="Unit_testing">
 			<resource resourceType="PROJECT" workspacePath="/TestSTM32CubeMCU"/>
 		</configuration>
