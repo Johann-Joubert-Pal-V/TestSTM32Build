@@ -48,7 +48,7 @@ $BULLSEYE_LOC/cov01 --on
 make -e CC="$BULLSEYE_LOC/covc -i $BULLSEYE_LOC/gcc" -B $1
 ./$1 xml out
 $BULLSEYE_LOC/cov01 --off
-#TEMP this does not work yet $BULLSEYE_LOC/covselect --file "%COVFILE%" --add "!..\CUnit\"
+$BULLSEYE_LOC/covselect --file "%COVFILE%" --add '!/CUnit/src/'
 echo START BULLSEYE HTML REPORT
 /opt/bullshtml/bullshtml -f $COVFILE cov_html_output
 echo STOP BULLSEYE HTML REPORT
