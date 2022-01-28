@@ -1,4 +1,4 @@
 #generate makefiles for project
 /opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -import TestSTM32CubeMCU
 /opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild TestSTM32CubeMCU/Debug
-
+/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild TestSTM32CubeMCU/UnitTesting -E PATH=$PATH -E CC=/usr/bin/gcc
