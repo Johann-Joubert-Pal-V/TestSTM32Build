@@ -71,7 +71,10 @@ int main(int argc, char* argv[])
 //	char * outputs = {"xml","out"};
 //
 	test_main(argc, argv);
-	printf("TEST APPLICATION %d, %s",argc,argv[1]);
+	printf("=============  TEST APPLICATION =============\n");
+	printf("Number of arguments : %d\n",argc);
+	printf("Arguments : %s\n",argv[1]);
+
 #else
   /* MCU Configuration--------------------------------------------------------*/
 
