@@ -1,9 +1,0 @@
-#generate makefiles for project
-/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -import TestSTM32CubeMCU
-#TEMP /opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild TestSTM32CubeMCU/Debug
-
-#The following arguments are required
-#-E PATH=$PATH  		assign the system PATH to the eclipse workspace path
-#-E CC=/usr/bin/gcc 	assign CC to the system GCC compiler
-#-markerType cdt 		suppress the eclipse errors/warnings about enviromental variables not found ,which are windows specific.
-/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild TestSTM32CubeMCU/UnitTesting -E PATH=$PATH -E CC=/usr/bin/gcc -markerType cdt
