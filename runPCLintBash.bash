@@ -54,6 +54,7 @@ pipenv run $PC_LINT_LOC/pclp_config.py --compiler=gcc --compiler-bin=/usr/bin/gc
 gcc $PC_LINT_LOC/imposter.c -o imposter 
 
 #TODO would be better to make a copy and edit the file there
+#change the arm-non-eabi-gcc variable to CC to enable swapping of the compiler.
 sed -i 's/arm-none-eabi-gcc/$(CC)/g' makefile Core/Src/subdir.mk Core/Startup/subdir.mk Drivers/STM32F3xx_HAL_Driver/Src/subdir.mk
 
 make clean

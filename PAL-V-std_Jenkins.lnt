@@ -1,0 +1,65 @@
+//=====================FROM LINTICATOR ========================  TestSTM32CubeMCU project
+//-vof
+//-vo
+//-e686
+-max_threads=4
+-dSTM32F303xC
+
+C:\PC-Lint\windows\lnt\au-misra3.lnt
+C:\PC-Lint\windows\lnt\au-misra3-amd1.lnt
+C:\PC-Lint\windows\lnt\au-misra3-amd2.lnt
+
+//Set Global level to Errors and warnings
+-w2
+//Disable Warnings and notes from libraries
+-wlib(4)
+-wlib(1)
+
+
+//+libdir("C:\ST\STM32CubeIDE_1.7.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\*")
+
+
+//+libm("C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeMCU\Core\Src\*.c")
+//=========== Was used in STM32IDE
+//+libdir("C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeMCU\Drivers\CMSIS\Include\")
+//+libdir("C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeMCU\Drivers\CMSIS\Device\ST\STM32F3xx\Include\")
+//+libdir("C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeMCU\Drivers\STM32F3xx_HAL_Driver\Inc\")
+//+libm("C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeMCU\Drivers\STM32F3xx_HAL_Driver\Src\*.c")
+//=========== Was used in STM32IDE
+
+//+libm("../Drivers/STM32F3xx_HAL_Driver/Src/*.c")
+
+
+//+libh(cmsis_compiler.h)
+//+libh(stm32f3*.h)
+//+libm(stm32f3*.c)
+
+
+
+//-e4??
+//-e5??
+//-e6??
+//-e15??
+//-e24??
+
+//+libclass(foreign,angle)
+
+//-e537
+//-e451
+//-e652
+//-e1564
+//-e666
+//-e650
+//-e641
+//-e587
+//-e572
+//-e506
+//-e522
+//-e523
+//-e504
+//-e2467
+//-e2445
+
+
+
+
