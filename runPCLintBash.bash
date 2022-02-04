@@ -30,6 +30,10 @@ echo $1
 echo $2
 
 
+#switch to Configuration (Debug/Release) output folder of supplied project and configuration 
+cd $1/$2/
+
+
 #cleanup files
 rm $PC_LINT_PROJECT_CONFIG
 rm $PC_LINT_ANALYSIS_FILE
