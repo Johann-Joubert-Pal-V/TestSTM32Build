@@ -1,15 +1,6 @@
 #!/bin/bash
 
-echo "set PC-LINT configuration"
-
-#PC LINT CONFIGURATION
-export PC_LINT_LOC=/opt/PC-LINT/config
-export PC_LINT_LNT_LOC=/opt/PC-LINT/lnt
-export PC_LINT_PROJECT_CONFIG=./project_config.lnt
-
-#Temporary filename for imposter log
-export IMPOSTER_LOG=./imposter_log.txt
-export PC_LINT_ANALYSIS_FILE=./analysis.log
+echo "set BullsEYE configuration"
 
 #Bullseye Configuration
 export BULLSEYE_LOC=/opt/BullseyeCoverage/bin
@@ -18,7 +9,6 @@ export COV_HTML_OUTPUT=./cov_html_output
 export PATH=$PATH:$BULLSEYE_LOC
 
 echo $PATH
-
 
 echo $PC_LINT_LOC
 echo $PC_LINT_PROJECT_CONFIG
@@ -35,11 +25,7 @@ cd $1/$2/
 
 
 #cleanup files
-rm $PC_LINT_PROJECT_CONFIG
-rm $PC_LINT_ANALYSIS_FILE
-rm $IMPOSTER_LOG
 rm $COVFILE
-rm $IMPOSTER_LOG
 #del %PROJECT_CONFIG%
 
 rm -rf /s /q %COV_HTML_OUTPUT%
