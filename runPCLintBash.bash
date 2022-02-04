@@ -26,8 +26,9 @@ echo $IMPOSTER_LOG
 echo $PC_LINT_ANALYSIS_FILE
 
 echo "commandline paramters"
-echo $1
-echo $2
+echo "Project : "$1
+echo "Output configuration : "$2
+echo "Target : "$3
 
 
 #switch to Configuration (Debug/Release) output folder of supplied project and configuration 
@@ -52,12 +53,13 @@ pipenv run $PC_LINT_LOC/pclp_config.py --compiler=gcc --compiler-bin=/usr/bin/gc
 #Compile PC-LINT imposter compiler
 gcc $PC_LINT_LOC/imposter.c -o imposter 
 
+#TODO would be better to make a copy and edit the file there
 sed -i 's/arm-none-eabi-gcc/$(CC)/g' makefile Core/Src/subdir.mk Core/Startup/subdir.mk Drivers/STM32F3xx_HAL_Driver/Src/subdir.mk
 
 make clean
 #make -e CC=$PC_LINT_LOC/imposter -B TestSTM32CubeGcc
 #Use PC-LINT imposter compiler to compile project
-make -e CC=./imposter -B TestSTM32CubeGcc
+make -e CC=./imposter -B $3
 
 #Generate the PC-LINT project configuration
 pipenv run $PC_LINT_LOC/pclp_config.py --compiler=gcc --imposter-file=$IMPOSTER_LOG --config-output-lnt-file=$PC_LINT_PROJECT_CONFIG --generate-project-config
