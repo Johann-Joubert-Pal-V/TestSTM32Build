@@ -1,0 +1,12 @@
+//+libm("C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeMCU\Core\Src\*.c")
+//=========== Was used in STM32IDE
++libdir("C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeMCU\Drivers\CMSIS\Include\")
++libdir("C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeMCU\Drivers\CMSIS\Device\ST\STM32F3xx\Include\")
++libdir("C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeMCU\Drivers\STM32F3xx_HAL_Driver\Inc\")
+//+libm("C:\Git\BuildServer\TestSTM32Build\TestSTM32CubeMCU\Drivers\STM32F3xx_HAL_Driver\Src\*.c")
+//=========== Was used in STM32IDE
+
++libm("../Drivers/STM32F3xx_HAL_Driver/Src/*.c")
+
+
+
