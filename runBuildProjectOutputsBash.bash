@@ -19,7 +19,7 @@ echo "Project name : "$1
 
 #generate makefiles for Debug
 #TODO add to system path that there is no hardcoded STM32CubeIDE version number
-#TEMP /opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E CC=gcc -markerType cdt
+/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E CC=gcc -markerType cdt
 
 #generate makefiles for Release
 #TODO add to system path that there is no hardcoded STM32CubeIDE version number
