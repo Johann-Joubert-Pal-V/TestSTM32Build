@@ -32,7 +32,10 @@ environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1293813943/PAT
 environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1293813943/append=true
 environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1293813943/appendContributed=true
 environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1313897953/CC/delimiter=;
-environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1313897953/CC/operation=append
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1313897953/CC/operation=replace
 environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1313897953/CC/value=gcc
 environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1313897953/append=true
 environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1313897953/appendContributed=true
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1313897953/compiler_prefix/delimiter=;
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1313897953/compiler_prefix/operation=replace
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1313897953/compiler_prefix/value=arm-none-eabi-
