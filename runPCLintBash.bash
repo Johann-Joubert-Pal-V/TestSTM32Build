@@ -67,4 +67,4 @@ pipenv run $PC_LINT_LOC/pclp_config.py --compiler=gcc --imposter-file=$IMPOSTER_
 #Use the PC-LINT compiler, jenkins and project configuration to LINT the project files
 #/opt/PC-LINT/pclp64_linux -max_threads=4 -os=$PC_LINT_ANALYSIS_FILE -vf co-gcc.lnt env-jenkins.lnt $PC_LINT_PROJECT_CONFIG $PC_LINT_LNT_LOC/au-misra3.lnt $PC_LINT_LNT_LOC/au-misra3-amd1.lnt $PC_LINT_LNT_LOC/au-misra3-amd2.lnt 
 #/opt/PC-LINT/pclp64_linux -max_threads=4 -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt env-jenkins.lnt $PC_LINT_PROJECT_CONFIG
-
+/opt/PC-LINT/pclp64_linux -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt ../../PAL-V-std_Jenkins.lnt ../../projTestSTM32CubeMCU_Jenkins.lnt ../../loptions.lnt ../../env-jenkins.lnt %PC_LINT_PROJECT_CONFIG%

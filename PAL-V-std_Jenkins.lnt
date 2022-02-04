@@ -5,9 +5,9 @@
 -max_threads=4
 -dSTM32F303xC
 
-C:\PC-Lint\windows\lnt\au-misra3.lnt
-C:\PC-Lint\windows\lnt\au-misra3-amd1.lnt
-C:\PC-Lint\windows\lnt\au-misra3-amd2.lnt
+/opt/PC-LINT/lnt/au-misra3.lnt
+/opt/PC-LINT/lnt/au-misra3-amd1.lnt
+/opt/PC-LINT/lnt/au-misra3-amd2.lnt
 
 //Set Global level to Errors and warnings
 -w2
