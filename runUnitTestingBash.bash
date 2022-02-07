@@ -5,7 +5,7 @@ echo "set BullsEYE configuration"
 #Bullseye Configuration
 export BULLSEYE_LOC=/opt/BullseyeCoverage/bin
 export COVFILE=Test.cov
-export COV_HTML_OUTPUT=./cov_html_output
+export COV_HTML_OUTPUT=./$1/$2/cov_html_output
 export PATH=$PATH:$BULLSEYE_LOC
 
 echo $PATH
