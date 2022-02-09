@@ -5,9 +5,8 @@ echo "set BullsEYE configuration"
 #Bullseye Configuration
 export BULLSEYE_LOC=/opt/BullseyeCoverage/bin
 export COVFILE=$PWD/$1/$2/Test.cov
-export COV_HTML_OUTPUT=./$1/$2/cov_html_output
+export COV_HTML_OUTPUT=$PWD/$1/$2/cov_html_output
 export PATH=$PATH:$BULLSEYE_LOC
-
 
 echo $PATH
 
@@ -33,11 +32,11 @@ rm -rf /s /q $1/$2/%COV_HTML_OUTPUT%
 $BULLSEYE_LOC/cov01 --on
 /opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/UnitTesting -E PATH=$PATH -E CC="$BULLSEYE_LOC/covc -i $BULLSEYE_LOC/gcc" -markerType cdt
 #make -e CC="$BULLSEYE_LOC/covc -i $BULLSEYE_LOC/gcc" -B $1
-$1/$2/$1 xml out
+$1/$2/$1 xml "$1/$2/out"
 $BULLSEYE_LOC/cov01 --off
 $BULLSEYE_LOC/covselect --file $COVFILE --add '!../CUnit/src/'
 #$BULLSEYE_LOC/covselect --file $COVFILE --add '!../Test/'
 $BULLSEYE_LOC/covselect --file $COVFILE --list
 echo START BULLSEYE HTML REPORT
-/opt/bullshtml/bullshtml -f $COVFILE cov_html_output
+/opt/bullshtml/bullshtml -f $COVFILE $COV_HTML_OUTPUT
 echo STOP BULLSEYE HTML REPORT
