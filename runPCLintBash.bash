@@ -13,15 +13,15 @@ export IMPOSTER_LOG=$PWD/$1/$2/imposter_log.txt
 export PC_LINT_ANALYSIS_FILE=$PWD/$1/$2/analysis.log
 
 current_path=$PWD
-echo $current_path
+echo "Current Path: "$current_path
 
 echo $PATH
 
 
-echo $PC_LINT_LOC
-echo $PC_LINT_PROJECT_CONFIG
-echo $IMPOSTER_LOG
-echo $PC_LINT_ANALYSIS_FILE
+echo "PC_LINT_LOC: "$PC_LINT_LOC
+echo "PC_LINT_PROJECT_CONFIG: "$PC_LINT_PROJECT_CONFIG
+echo "$IMPOSTER_LOG: "$IMPOSTER_LOG
+echo "$PC_LINT_ANALYSIS_FILE: "$PC_LINT_ANALYSIS_FILE
 
 echo "commandline paramters"
 echo "Project : "$1
