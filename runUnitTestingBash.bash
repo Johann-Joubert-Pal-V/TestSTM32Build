@@ -31,7 +31,8 @@ rm $COVFILE
 rm -rf /s /q %COV_HTML_OUTPUT%
 
 $BULLSEYE_LOC/cov01 --on
-make -e CC="$BULLSEYE_LOC/covc -i $BULLSEYE_LOC/gcc" -B $1
+/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/UnitTesting -E PATH=$PATH -E CC="$BULLSEYE_LOC/covc -i $BULLSEYE_LOC/gcc" -markerType cdt
+#make -e CC="$BULLSEYE_LOC/covc -i $BULLSEYE_LOC/gcc" -B $1
 ./$1 xml out
 $BULLSEYE_LOC/cov01 --off
 $BULLSEYE_LOC/covselect --file $COVFILE --add '!../CUnit/src/'
