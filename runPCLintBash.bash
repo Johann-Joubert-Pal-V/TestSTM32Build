@@ -5,11 +5,15 @@ echo "set PC-LINT configuration"
 #PC LINT CONFIGURATION
 export PC_LINT_LOC=/opt/PC-LINT/config
 export PC_LINT_LNT_LOC=/opt/PC-LINT/lnt
-export PC_LINT_PROJECT_CONFIG=./project_config.lnt
+#export PC_LINT_PROJECT_CONFIG=./project_config.lnt
+export PC_LINT_PROJECT_CONFIG=$PWD/$1/$2/project_config.lnt
 
 #Temporary filename for imposter log
-export IMPOSTER_LOG=./imposter_log.txt
-export PC_LINT_ANALYSIS_FILE=./analysis.log
+export IMPOSTER_LOG=$PWD/$1/$2/imposter_log.txt
+export PC_LINT_ANALYSIS_FILE==$PWD/$1/$2/analysis.log
+
+current_path=$PWD
+echo $current_path
 
 echo $PATH
 
@@ -40,8 +44,6 @@ rm $IMPOSTER_LOG
 rm $COVFILE
 rm $IMPOSTER_LOG
 #del %PROJECT_CONFIG%
-
-rm -rf /s /q %COV_HTML_OUTPUT%
 
 pipenv run pip3 install regex
 pipenv run pip3 install pyyaml
@@ -75,3 +77,6 @@ pipenv run $PC_LINT_LOC/pclp_config.py --compiler=gcc --imposter-file=$IMPOSTER_
 #Use the PC-LINT compiler, jenkins and project configuration to LINT the project files
 #/opt/PC-LINT/pclp64_linux -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt ../../PAL-V-std_Jenkins.lnt ../../projTestSTM32CubeMCU_Jenkins.lnt ../../loptions.lnt ../../env-jenkins.lnt %PC_LINT_PROJECT_CONFIG%
 /opt/PC-LINT/pclp64_linux -os=$PC_LINT_ANALYSIS_FILE co-gcc.lnt ../../PAL-V-std_Jenkins.lnt ../projSW-MainPowerUnit_Jenkins.lnt ../../env-jenkins.lnt %PC_LINT_PROJECT_CONFIG%
+
+
+cd $current_path
