@@ -10,7 +10,7 @@ export PC_LINT_PROJECT_CONFIG=$PWD/$1/$2/project_config.lnt
 
 #Temporary filename for imposter log
 export IMPOSTER_LOG=$PWD/$1/$2/imposter_log.txt
-export PC_LINT_ANALYSIS_FILE==$PWD/$1/$2/analysis.log
+export PC_LINT_ANALYSIS_FILE=$PWD/$1/$2/analysis.log
 
 current_path=$PWD
 echo $current_path
