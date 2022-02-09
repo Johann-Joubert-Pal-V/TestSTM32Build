@@ -4,16 +4,16 @@ echo "set BullsEYE configuration"
 
 #Bullseye Configuration
 export BULLSEYE_LOC=/opt/BullseyeCoverage/bin
-export COVFILE=Test.cov
+export COVFILE=$PWD/$1/$2/Test.cov
 export COV_HTML_OUTPUT=./$1/$2/cov_html_output
 export PATH=$PATH:$BULLSEYE_LOC
 
+
 echo $PATH
 
-echo $PC_LINT_LOC
-echo $PC_LINT_PROJECT_CONFIG
-echo $IMPOSTER_LOG
-echo $PC_LINT_ANALYSIS_FILE
+echo "BULLSEYE_LOC: "$BULLSEYE_LOC
+echo "COVFILE: "$COVFILE
+echo "COV_HTML_OUTPUT: "$COV_HTML_OUTPUT
 
 echo "commandline paramters"
 echo "Project name : "$1
@@ -21,19 +21,19 @@ echo "Configuration name : "$2
 
 
 #switch to UnitTesting output folder of supplied project and configuration -> could hardcode UnitTesting in path.
-cd $1/$2/
+#cd $1/$2/
 
 
 #cleanup files
 rm $COVFILE
 #del %PROJECT_CONFIG%
 
-rm -rf /s /q %COV_HTML_OUTPUT%
+rm -rf /s /q $1/$2/%COV_HTML_OUTPUT%
 
 $BULLSEYE_LOC/cov01 --on
 /opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/UnitTesting -E PATH=$PATH -E CC="$BULLSEYE_LOC/covc -i $BULLSEYE_LOC/gcc" -markerType cdt
 #make -e CC="$BULLSEYE_LOC/covc -i $BULLSEYE_LOC/gcc" -B $1
-./$1 xml out
+$1/$2/$1 xml out
 $BULLSEYE_LOC/cov01 --off
 $BULLSEYE_LOC/covselect --file $COVFILE --add '!../CUnit/src/'
 #$BULLSEYE_LOC/covselect --file $COVFILE --add '!../Test/'
