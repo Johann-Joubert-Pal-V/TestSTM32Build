@@ -2,6 +2,7 @@
 echo "commandline paramters"
 echo "Project name : "$1
 
+export PATH=$PATH:/opt/st/stm32cubeide_1.8.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/bin
 
 #TODO add to system path that there is no hardcoded STM32CubeIDE version number
 /opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -import $1 -E PATH=$PATH -E CC="/usr/bin/gcc"
