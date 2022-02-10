@@ -12,6 +12,9 @@ export PC_LINT_PROJECT_CONFIG=$PWD/$1/$2/project_config.lnt
 export IMPOSTER_LOG=$PWD/$1/$2/imposter_log.txt
 export PC_LINT_ANALYSIS_FILE=$PWD/$1/$2/analysis.log
 
+#Add  ARM compiler to path
+export PATH=$PATH:/opt/st/stm32cubeide_1.8.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/bin
+
 current_path=$PWD
 echo "Current Path: "$current_path
 
