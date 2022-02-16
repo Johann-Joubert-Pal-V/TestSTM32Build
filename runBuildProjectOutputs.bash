@@ -24,7 +24,7 @@ echo "Current Path: "$current_path
 
 #generate makefiles for Debug
 #TODO add to system path that there is no hardcoded STM32CubeIDE version number
-/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E PATH=$PATH -E CC=gcc -E PostBuildCMD="$pwd" -markerType cdt
+/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E PATH=$PATH -E CC=gcc -E PostBuildCMD="pwd" -markerType cdt
 #/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E PATH=$PATH -E CC=gcc -E PostBuildCMD="$current_path/../SW-PAL-Vtune/postbuild/postbuild.bash $current_path/../ $1 $2" -markerType cdt
 #/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E PATH=$PATH -E CC=gcc -markerType cdt
 
