@@ -33,7 +33,7 @@ echo "Target : "$3
 
 #generate makefiles for Debug
 #TODO add to system path that there is no hardcoded STM32CubeIDE version number
-/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E PATH=$PATH -E CC=gcc -markerType cdt
+/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E PATH=$PATH -E CC=gcc -E PostBuildCMD="echo \"HALLO\"" -markerType cdt
 
 
 #switch to Configuration (Debug/Release) output folder of supplied project and configuration 
@@ -52,13 +52,13 @@ pipenv run pip3 install regex
 pipenv run pip3 install pyyaml
 
 #Generate PC-LINT compiler configuration
-pipenv run $PC_LINT_LOC/pclp_config.py --compiler=gcc --compiler-bin=/usr/bin/gcc --config-output-lnt-file=co-gcc.lnt --config-output-header-file=co-gcc.h --generate-compiler-config
+#pipenv run $PC_LINT_LOC/pclp_config.py --compiler=gcc --compiler-bin=/usr/bin/gcc --config-output-lnt-file=co-gcc.lnt --config-output-header-file=co-gcc.h --generate-compiler-config
+pipenv run $PC_LINT_LOC/pclp_config.py --compiler=gcc --compiler-bin=arm-none-eabi-gcc --config-output-lnt-file=co-gcc.lnt --config-output-header-file=co-gcc.h --generate-compiler-config
 #Compile PC-LINT imposter compiler
 gcc $PC_LINT_LOC/imposter.c -o imposter 
 
 #change the arm-non-eabi-gcc variable to CC to enable swapping of the compiler.
 echo "========== CURRENTLY EDITING MAKEFILE BUILD WON'T WORK AFTERWARDS, IF NEEDED BUILD WITH -e CC=arm-none-eabi-gcc ========== "
-#sed -i 's/arm-none-eabi-gcc/$(CC)/g' makefile Appl/Src/subdir.mk Bsp/Src/subdir.mk Chip/Src/Gen/subdir.mk Chip/Src/subdir.mk Configurations/SWCONF-CAN/NOC/subdir.mk Configurations/SWCONF-CAN/SHC/subdir.mk Configurations/SWCONF-ErrorManagement/subdir.mk Libraries/SWLIB-CAN/subdir.mk Libraries/SWLIB-CAN/Timed/subdir.mk Libraries/SWLIB-CAN/Timed/NOC/subdir.mk Libraries/SWLIB-CAN/Timed/SHC/subdir.mk Libraries/SWLIB-CAN/XCP/subdir.mk Libraries/SWLIB-ErrorManagement/subdir.mk Libraries/SWLIB-HAL-F3/STM32F3xx_HAL_Driver/Src/subdir.mk Libraries/SWLIB-MEM/subdir.mk Libraries/SWLIB-PID/subdir.mk Libraries/SWLIB-Utils/subdir.mk
 files=($(find . -type f -name "subdir.mk"))
 for item in ${files[*]}
 do
