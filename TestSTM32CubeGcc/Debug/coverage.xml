@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BullseyeCoverage XML 8.24.5 Linux x64 License 118032 -->
+<?xml-stylesheet type="text/xsl" href="coverage.xsl"?>
+<BullseyeCoverage name="Test.cov" dir="/home/git_workspace/TestSTM32Build/TestSTM32CubeGcc/Debug/" buildId="36e9f2ce_2022-01-06_16:19:17" version="6" xmlns="https://www.bullseye.com/covxml"
+ fn_cov="62" fn_total="141" cd_cov="192" cd_total="629" d_cov="159" d_total="503">
+<folder name=".." fn_cov="62" fn_total="141" cd_cov="192" cd_total="629" d_cov="159" d_total="503">
+<folder name="CUnit" fn_cov="51" fn_total="128" cd_cov="187" cd_total="617" d_cov="154" d_total="491">
+<folder name="src" fn_cov="51" fn_total="128" cd_cov="187" cd_total="617" d_cov="154" d_total="491">
+<src name="Automated.c" mtime="1641395641" fn_cov="11" fn_total="15" cd_cov="62" cd_total="136" d_cov="53" d_total="120">
+<fn name="CU_automated_run_tests(void)" fn_cov="1" fn_total="1" cd_cov="3" cd_total="6" d_cov="3" d_total="6">
+<probe line="102" column="4" kind="function" event="full"/>
+<probe line="111" kind="decision" event="false"/>
+<probe line="115" kind="decision" event="false"/>
+<probe line="130" kind="decision" event="false"/>
+<block line="103" entered="1"/>
+<block line="112" entered="0"/>
+<block line="116" entered="0"/>
+<block line="120" entered="1"/>
+<block line="131" entered="0"/>
+</fn>
+<fn name="CU_set_output_filename(const char*)" fn_cov="1" fn_total="1" cd_cov="2" cd_total="4" d_cov="2" d_total="4">
+<probe line="137" column="4" kind="function" event="full"/>
+<probe line="143" kind="decision" event="true"/>
+<probe line="154" kind="decision" event="true"/>
+<block line="138" entered="1"/>
+<block line="144" entered="1"/>
+<block line="147" entered="0"/>
+<block line="155" entered="1"/>
+<block line="158" entered="0"/>
+</fn>
+<fn name="CU_list_tests_to_file()" fn_cov="1" fn_total="1" cd_cov="1" cd_total="2" d_cov="1" d_total="2">
+<probe line="166" column="12" kind="function" event="full"/>
+<probe line="169" kind="decision" event="false"/>
+<block line="167" entered="1"/>
+<block line="170" entered="0"/>
+</fn>
+<fn name="automated_run_all_tests(CU_pTestRegistry)" fn_cov="1" fn_total="1" cd_cov="3" cd_total="6" d_cov="3" d_total="6">
+<probe line="186" column="10" kind="function" event="full"/>
+<probe line="194" kind="decision" event="false"/>
+<probe line="197" kind="decision" event="true"/>
+<probe line="201" kind="decision" event="false"/>
+<block line="187" entered="1"/>
+<block line="195" entered="0"/>
+<block line="198" entered="1"/>
+<block line="202" entered="0"/>
+</fn>
+<fn name="initialize_result_file(const char*)" fn_cov="1" fn_total="1" cd_cov="5" cd_total="10" d_cov="3" d_total="6">
+<probe line="210" column="18" kind="function" event="full"/>
+<probe line="216" kind="decision" event="false"/>
+<probe line="216" column="3" kind="condition" event="false"/>
+<probe line="216" column="23" kind="condition" event="false"/>
+<probe line="219" column="4" kind="decision" event="false"/>
+<probe line="225" kind="decision" event="false"/>
+<block line="211" entered="1"/>
+<block line="217" entered="0"/>
+<block line="219" entered="1"/>
+<block line="220" entered="0"/>
+<block line="223" entered="1"/>
+<block line="226" entered="0"/>
+<block line="232" entered="1"/>
+</fn>
+<fn name="automated_test_start_message_handler(const CU_pTest,const CU_pSuite)" fn_cov="1" fn_total="1" cd_cov="10" cd_total="18" d_cov="7" d_total="14">
+<probe line="251" column="10" kind="function" event="full"/>
+<probe line="264" kind="decision" event="full"/>
+<probe line="264" column="3" kind="condition" event="full"/>
+<probe line="264" column="28" kind="condition" event="false"/>
+<probe line="265" kind="decision" event="false"/>
+<probe line="266" kind="decision" event="none"/>
+<probe line="281" kind="decision" event="false"/>
+<probe line="287" kind="decision" event="none"/>
+<probe line="293" column="1" kind="decision" event="true"/>
+<probe line="300" kind="decision" event="full"/>
+<block line="252" entered="1"/>
+<block line="265" entered="1"/>
+<block line="266" entered="0"/>
+<block line="267" entered="0"/>
+<block line="271" entered="0"/>
+<block line="282" entered="0"/>
+<block line="289" entered="1"/>
+<block line="301" entered="1"/>
+</fn>
+<fn name="automated_test_complete_message_handler(const CU_pTest,const CU_pSuite,const CU_pFailureRecord)" fn_cov="1" fn_total="1" cd_cov="16" cd_total="34" d_cov="16" d_total="34">
+<probe line="311" column="10" kind="function" event="full"/>
+<probe line="329" kind="decision" event="full"/>
+<probe line="331" kind="decision" event="true"/>
+<probe line="332" kind="decision" event="false"/>
+<probe line="336" kind="decision" event="none"/>
+<probe line="346" kind="decision" event="none"/>
+<probe line="351" kind="decision" event="full"/>
+<probe line="357" kind="decision" event="true"/>
+<probe line="363" kind="decision" event="true"/>
+<probe line="365" kind="decision" event="false"/>
+<probe line="372" kind="decision" event="true"/>
+<probe line="379" kind="decision" event="false"/>
+<probe line="381" column="38" kind="decision" event="none"/>
+<probe line="394" kind="decision" event="true"/>
+<probe line="401" kind="decision" event="false"/>
+<probe line="407" kind="decision" event="false"/>
+<probe line="411" kind="decision" event="none"/>
+<probe line="423" kind="decision" event="full"/>
+<block line="314" entered="1"/>
+<block line="331" entered="1"/>
+<block line="332" entered="1"/>
+<block line="333" entered="0"/>
+<block line="337" entered="0"/>
+<block line="340" entered="0"/>
+<block line="353" entered="1"/>
+<block line="358" entered="1"/>
+<block line="361" entered="0"/>
+<block line="364" entered="1"/>
+<block line="366" entered="0"/>
+<block line="373" entered="1"/>
+<block line="376" entered="0"/>
+<block line="380" entered="0"/>
+<block line="384" entered="1"/>
+<block line="402" entered="0"/>
+<block line="407" entered="1"/>
+<block line="408" entered="0"/>
+<block line="413" entered="1"/>
+<block line="424" entered="1"/>
+</fn>
+<fn name="automated_all_tests_complete_message_handler(const CU_pFailureRecord)" fn_cov="1" fn_total="1" cd_cov="5" cd_total="10" d_cov="3" d_total="6">
+<probe line="432" column="10" kind="function" event="full"/>
+<probe line="443" kind="decision" event="true"/>
+<probe line="443" column="3" kind="condition" event="true"/>
+<probe line="443" column="28" kind="condition" event="true"/>
+<probe line="444" kind="decision" event="true"/>
+<probe line="451" kind="decision" event="true"/>
+<block line="433" entered="1"/>
+<block line="444" entered="1"/>
+<block line="445" entered="1"/>
+<block line="452" entered="1"/>
+</fn>
+<fn name="automated_suite_init_failure_message_handler(const CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="6" d_cov="0" d_total="6">
+<probe line="510" column="10" kind="function" event="none"/>
+<probe line="516" kind="decision" event="none"/>
+<probe line="517" kind="decision" event="none"/>
+<probe line="529" kind="decision" event="none"/>
+<block line="511" entered="0"/>
+<block line="517" entered="0"/>
+<block line="518" entered="0"/>
+<block line="522" entered="0"/>
+<block line="530" entered="0"/>
+</fn>
+<fn name="automated_suite_cleanup_failure_message_handler(const CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="8" d_cov="0" d_total="8">
+<probe line="546" column="10" kind="function" event="none"/>
+<probe line="552" kind="decision" event="none"/>
+<probe line="553" kind="decision" event="none"/>
+<probe line="565" kind="decision" event="none"/>
+<probe line="577" kind="decision" event="none"/>
+<block line="547" entered="0"/>
+<block line="553" entered="0"/>
+<block line="554" entered="0"/>
+<block line="558" entered="0"/>
+<block line="566" entered="0"/>
+<block line="579" entered="0"/>
+</fn>
+<fn name="uninitialize_result_file(void)" fn_cov="1" fn_total="1" cd_cov="2" cd_total="4" d_cov="2" d_total="4">
+<probe line="595" column="18" kind="function" event="full"/>
+<probe line="610" kind="decision" event="true"/>
+<probe line="612" kind="decision" event="false"/>
+<block line="596" entered="1"/>
+<block line="613" entered="0"/>
+</fn>
+<fn name="automated_list_all_tests(CU_pTestRegistry,const char*)" fn_cov="1" fn_total="1" cd_cov="15" cd_total="26" d_cov="13" d_total="22">
+<probe line="628" column="18" kind="function" event="full"/>
+<probe line="638" kind="decision" event="false"/>
+<probe line="641" column="4" kind="decision" event="false"/>
+<probe line="641" column="7" kind="condition" event="false"/>
+<probe line="641" column="27" kind="condition" event="false"/>
+<probe line="644" column="4" kind="decision" event="false"/>
+<probe line="679" kind="decision" event="full"/>
+<probe line="693" kind="decision" event="true"/>
+<probe line="694" kind="decision" event="true"/>
+<probe line="695" kind="decision" event="true"/>
+<probe line="700" kind="decision" event="full"/>
+<probe line="708" kind="decision" event="true"/>
+<probe line="727" kind="decision" event="true"/>
+<probe line="729" kind="decision" event="false"/>
+<block line="629" entered="1"/>
+<block line="639" entered="0"/>
+<block line="641" entered="1"/>
+<block line="642" entered="0"/>
+<block line="644" entered="1"/>
+<block line="645" entered="0"/>
+<block line="648" entered="1"/>
+<block line="680" entered="1"/>
+<block line="701" entered="1"/>
+<block line="730" entered="0"/>
+</fn>
+<fn name="CU_automated_enable_junit_xml(int)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="742" column="4" kind="function" event="none"/>
+<block line="743" entered="0"/>
+</fn>
+<fn name="CU_automated_package_name_set(const char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="751" column="4" kind="function" event="none"/>
+<probe line="756" kind="decision" event="none"/>
+<block line="752" entered="0"/>
+<block line="757" entered="0"/>
+</fn>
+<fn name="CU_automated_package_name_get()" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="765" column="10" kind="function" event="full"/>
+<block line="766" entered="1"/>
+</fn>
+</src>
+<src name="Basic.c" mtime="1641395641" fn_cov="0" fn_total="15" cd_cov="0" cd_total="55" d_cov="0" d_total="51">
+<fn name="CU_basic_run_tests(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="6" d_cov="0" d_total="6">
+<probe line="77" column="12" kind="function" event="none"/>
+<probe line="81" kind="decision" event="none"/>
+<probe line="82" kind="decision" event="none"/>
+<probe line="86" column="4" kind="decision" event="none"/>
+<block line="78" entered="0"/>
+<block line="82" entered="0"/>
+<block line="83" entered="0"/>
+<block line="86" entered="0"/>
+<block line="87" entered="0"/>
+</fn>
+<fn name="CU_basic_run_suite(CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="4" d_cov="0" d_total="4">
+<probe line="93" column="12" kind="function" event="none"/>
+<probe line="97" kind="decision" event="none"/>
+<probe line="99" column="4" kind="decision" event="none"/>
+<block line="94" entered="0"/>
+<block line="98" entered="0"/>
+<block line="99" entered="0"/>
+<block line="100" entered="0"/>
+</fn>
+<fn name="CU_basic_run_test(CU_pSuite,CU_pTest)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="6" d_cov="0" d_total="6">
+<probe line="106" column="12" kind="function" event="none"/>
+<probe line="110" kind="decision" event="none"/>
+<probe line="112" column="4" kind="decision" event="none"/>
+<probe line="114" column="4" kind="decision" event="none"/>
+<block line="107" entered="0"/>
+<block line="111" entered="0"/>
+<block line="112" entered="0"/>
+<block line="113" entered="0"/>
+<block line="114" entered="0"/>
+<block line="115" entered="0"/>
+</fn>
+<fn name="CU_basic_set_mode(CU_BasicRunMode)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="121" column="4" kind="function" event="none"/>
+<block line="122" entered="0"/>
+</fn>
+<fn name="CU_basic_get_mode(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="127" column="15" kind="function" event="none"/>
+<block line="128" entered="0"/>
+</fn>
+<fn name="CU_basic_show_failures(CU_pFailureRecord)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="6" d_cov="0" d_total="6">
+<probe line="133" column="4" kind="function" event="none"/>
+<probe line="137" column="8" kind="decision" event="none"/>
+<probe line="139" kind="decision" event="none"/>
+<probe line="141" kind="decision" event="none"/>
+<block line="134" entered="0"/>
+<block line="138" entered="0"/>
+</fn>
+<fn name="basic_initialize(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="153" column="18" kind="function" event="none"/>
+<probe line="161" kind="decision" event="none"/>
+<block line="154" entered="0"/>
+<block line="162" entered="0"/>
+</fn>
+<fn name="basic_run_all_tests(CU_pTestRegistry)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="4" d_cov="0" d_total="4">
+<probe line="186" column="18" kind="function" event="none"/>
+<probe line="193" kind="decision" event="none"/>
+<probe line="196" kind="decision" event="none"/>
+<block line="187" entered="0"/>
+<block line="194" entered="0"/>
+<block line="197" entered="0"/>
+</fn>
+<fn name="basic_run_suite(CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="207" column="18" kind="function" event="none"/>
+<block line="208" entered="0"/>
+</fn>
+<fn name="basic_run_single_test(CU_pSuite,CU_pTest)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="221" column="18" kind="function" event="none"/>
+<block line="222" entered="0"/>
+</fn>
+<fn name="basic_test_start_message_handler(const CU_pTest,const CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="8" d_cov="0" d_total="4">
+<probe line="232" column="10" kind="function" event="none"/>
+<probe line="237" kind="decision" event="none"/>
+<probe line="239" kind="decision" event="none"/>
+<probe line="239" column="3" kind="condition" event="none"/>
+<probe line="239" column="28" kind="condition" event="none"/>
+<block line="233" entered="0"/>
+<block line="238" entered="0"/>
+<block line="240" entered="0"/>
+<block line="246" entered="0"/>
+</fn>
+<fn name="basic_test_complete_message_handler(const CU_pTest,const CU_pSuite,const CU_pFailureRecord)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="15" d_cov="0" d_total="15">
+<probe line="257" column="10" kind="function" event="none"/>
+<probe line="267" kind="decision" event="none"/>
+<probe line="268" kind="decision" event="none"/>
+<probe line="274" kind="switch-label" event="none"/>
+<probe line="277" kind="switch-label" event="none"/>
+<probe line="282" kind="switch-label" event="none"/>
+<probe line="285" kind="decision" event="none"/>
+<probe line="286" column="8" kind="decision" event="none"/>
+<probe line="288" kind="decision" event="none"/>
+<probe line="290" kind="decision" event="none"/>
+<block line="260" entered="0"/>
+<block line="268" entered="0"/>
+<block line="269" entered="0"/>
+<block line="273" entered="0"/>
+<block line="275" entered="0"/>
+<block line="278" entered="0"/>
+<block line="283" entered="0"/>
+<block line="286" entered="0"/>
+<block line="287" entered="0"/>
+</fn>
+<fn name="basic_all_tests_complete_message_handler(const CU_pFailureRecord)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="300" column="10" kind="function" event="none"/>
+<block line="301" entered="0"/>
+</fn>
+<fn name="basic_suite_init_failure_message_handler(const CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="312" column="10" kind="function" event="none"/>
+<probe line="317" kind="decision" event="none"/>
+<block line="313" entered="0"/>
+<block line="318" entered="0"/>
+</fn>
+<fn name="basic_suite_cleanup_failure_message_handler(const CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="325" column="10" kind="function" event="none"/>
+<probe line="330" kind="decision" event="none"/>
+<block line="326" entered="0"/>
+<block line="331" entered="0"/>
+</fn>
+</src>
+<src name="CUError.c" mtime="1641395641" fn_cov="3" fn_total="6" cd_cov="2" cd_total="10" d_cov="1" d_total="6">
+<fn name="CU_set_error(CU_ErrorCode)" fn_cov="1" fn_total="1" cd_cov="2" cd_total="6" d_cov="1" d_total="2">
+<probe line="63" column="4" kind="function" event="full"/>
+<probe line="65" kind="decision" event="false"/>
+<probe line="65" column="3" kind="condition" event="false"/>
+<probe line="65" column="25" kind="condition" event="none"/>
+<block line="64" entered="1"/>
+<block line="67" entered="0"/>
+</fn>
+<fn name="CU_get_error(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="80" column="12" kind="function" event="full"/>
+<block line="81" entered="1"/>
+</fn>
+<fn name="CU_get_error_msg(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="86" column="10" kind="function" event="none"/>
+<block line="87" entered="0"/>
+</fn>
+<fn name="CU_set_error_action(CU_ErrorAction)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="92" column="4" kind="function" event="full"/>
+<block line="93" entered="1"/>
+</fn>
+<fn name="CU_get_error_action(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="98" column="14" kind="function" event="none"/>
+<block line="99" entered="0"/>
+</fn>
+<fn name="get_error_desc(CU_ErrorCode)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="4" d_cov="0" d_total="4">
+<probe line="115" column="16" kind="function" event="none"/>
+<probe line="168" kind="decision" event="none"/>
+<probe line="171" column="4" kind="decision" event="none"/>
+<block line="116" entered="0"/>
+<block line="169" entered="0"/>
+<block line="171" entered="0"/>
+<block line="172" entered="0"/>
+<block line="175" entered="0"/>
+</fn>
+</src>
+<src name="TestDB.c" mtime="1641395641" fn_cov="18" fn_total="40" cd_cov="44" cd_total="204" d_cov="42" d_total="160">
+<fn name="CU_initialize_registry(void)" fn_cov="1" fn_total="1" cd_cov="2" cd_total="4" d_cov="2" d_total="4">
+<probe line="94" column="12" kind="function" event="full"/>
+<probe line="102" kind="decision" event="false"/>
+<probe line="107" kind="decision" event="false"/>
+<block line="95" entered="1"/>
+<block line="103" entered="0"/>
+<block line="108" entered="0"/>
+</fn>
+<fn name="CU_registry_initialized(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="115" column="7" kind="function" event="none"/>
+<probe line="117" column="6" kind="decision" event="none"/>
+<block line="116" entered="0"/>
+</fn>
+<fn name="CU_cleanup_registry(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="121" column="4" kind="function" event="full"/>
+<block line="122" entered="1"/>
+</fn>
+<fn name="CU_get_registry(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="132" column="16" kind="function" event="full"/>
+<block line="133" entered="1"/>
+</fn>
+<fn name="CU_set_registry(CU_pTestRegistry)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="138" column="16" kind="function" event="none"/>
+<block line="139" entered="0"/>
+</fn>
+<fn name="CU_add_suite_with_setup_and_teardown(const char*,CU_InitializeFunc,CU_CleanupFunc,CU_SetUpFunc,CU_TearDownFunc)" fn_cov="1" fn_total="1" cd_cov="4" cd_total="8" d_cov="4" d_total="8">
+<probe line="150" column="9" kind="function" event="full"/>
+<probe line="157" kind="decision" event="false"/>
+<probe line="160" column="4" kind="decision" event="false"/>
+<probe line="165" kind="decision" event="false"/>
+<probe line="169" kind="decision" event="false"/>
+<block line="151" entered="1"/>
+<block line="158" entered="0"/>
+<block line="160" entered="1"/>
+<block line="161" entered="0"/>
+<block line="164" entered="1"/>
+<block line="166" entered="0"/>
+<block line="169" entered="1"/>
+<block line="170" entered="0"/>
+</fn>
+<fn name="CU_add_suite(const char*,CU_InitializeFunc,CU_CleanupFunc)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="181" column="9" kind="function" event="none"/>
+<block line="182" entered="0"/>
+</fn>
+<fn name="CU_set_suite_active(CU_pSuite,int)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="187" column="12" kind="function" event="none"/>
+<probe line="191" kind="decision" event="none"/>
+<block line="188" entered="0"/>
+<block line="192" entered="0"/>
+<block line="195" entered="0"/>
+</fn>
+<fn name="CU_set_suite_name(CU_pSuite,const char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="4" d_cov="0" d_total="4">
+<probe line="203" column="12" kind="function" event="none"/>
+<probe line="207" kind="decision" event="none"/>
+<probe line="210" column="4" kind="decision" event="none"/>
+<block line="204" entered="0"/>
+<block line="208" entered="0"/>
+<block line="210" entered="0"/>
+<block line="211" entered="0"/>
+<block line="214" entered="0"/>
+</fn>
+<fn name="CU_set_suite_initfunc(CU_pSuite,CU_InitializeFunc)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="224" column="12" kind="function" event="none"/>
+<probe line="228" kind="decision" event="none"/>
+<block line="225" entered="0"/>
+<block line="229" entered="0"/>
+<block line="232" entered="0"/>
+</fn>
+<fn name="CU_set_suite_cleanupfunc(CU_pSuite,CU_CleanupFunc)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="240" column="12" kind="function" event="none"/>
+<probe line="244" kind="decision" event="none"/>
+<block line="241" entered="0"/>
+<block line="245" entered="0"/>
+<block line="248" entered="0"/>
+</fn>
+<fn name="CU_get_suite(const char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="4" d_cov="0" d_total="4">
+<probe line="256" column="9" kind="function" event="none"/>
+<probe line="261" kind="decision" event="none"/>
+<probe line="264" column="4" kind="decision" event="none"/>
+<block line="257" entered="0"/>
+<block line="262" entered="0"/>
+<block line="264" entered="0"/>
+<block line="265" entered="0"/>
+<block line="268" entered="0"/>
+</fn>
+<fn name="CU_get_suite_at_pos(unsigned int)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="276" column="9" kind="function" event="none"/>
+<probe line="281" kind="decision" event="none"/>
+<block line="277" entered="0"/>
+<block line="282" entered="0"/>
+<block line="285" entered="0"/>
+</fn>
+<fn name="CU_get_suite_pos(CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="12" d_cov="0" d_total="8">
+<probe line="293" column="11" kind="function" event="none"/>
+<probe line="299" kind="decision" event="none"/>
+<probe line="302" column="4" kind="decision" event="none"/>
+<probe line="308" kind="decision" event="none"/>
+<probe line="308" column="6" kind="condition" event="none"/>
+<probe line="308" column="29" kind="condition" event="none"/>
+<probe line="312" kind="decision" event="none"/>
+<block line="294" entered="0"/>
+<block line="300" entered="0"/>
+<block line="302" entered="0"/>
+<block line="303" entered="0"/>
+<block line="306" entered="0"/>
+<block line="309" entered="0"/>
+<block line="313" entered="0"/>
+</fn>
+<fn name="CU_get_suite_pos_by_name(const char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="12" d_cov="0" d_total="8">
+<probe line="322" column="11" kind="function" event="none"/>
+<probe line="328" kind="decision" event="none"/>
+<probe line="331" column="4" kind="decision" event="none"/>
+<probe line="337" kind="decision" event="none"/>
+<probe line="337" column="6" kind="condition" event="none"/>
+<probe line="337" column="29" kind="condition" event="none"/>
+<probe line="341" kind="decision" event="none"/>
+<block line="323" entered="0"/>
+<block line="329" entered="0"/>
+<block line="331" entered="0"/>
+<block line="332" entered="0"/>
+<block line="335" entered="0"/>
+<block line="338" entered="0"/>
+<block line="342" entered="0"/>
+</fn>
+<fn name="CU_add_test(CU_pSuite,const char*,CU_TestFunc)" fn_cov="1" fn_total="1" cd_cov="6" cd_total="12" d_cov="6" d_total="12">
+<probe line="351" column="8" kind="function" event="full"/>
+<probe line="358" kind="decision" event="false"/>
+<probe line="361" column="4" kind="decision" event="false"/>
+<probe line="364" column="4" kind="decision" event="false"/>
+<probe line="367" column="4" kind="decision" event="false"/>
+<probe line="372" kind="decision" event="false"/>
+<probe line="377" kind="decision" event="false"/>
+<block line="352" entered="1"/>
+<block line="359" entered="0"/>
+<block line="361" entered="1"/>
+<block line="362" entered="0"/>
+<block line="364" entered="1"/>
+<block line="365" entered="0"/>
+<block line="367" entered="1"/>
+<block line="368" entered="0"/>
+<block line="371" entered="1"/>
+<block line="373" entered="0"/>
+<block line="376" entered="1"/>
+<block line="378" entered="0"/>
+</fn>
+<fn name="CU_set_test_active(CU_pTest,int)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="389" column="12" kind="function" event="none"/>
+<probe line="393" kind="decision" event="none"/>
+<block line="390" entered="0"/>
+<block line="394" entered="0"/>
+<block line="397" entered="0"/>
+</fn>
+<fn name="CU_set_test_name(CU_pTest,const char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="4" d_cov="0" d_total="4">
+<probe line="405" column="12" kind="function" event="none"/>
+<probe line="409" kind="decision" event="none"/>
+<probe line="412" column="4" kind="decision" event="none"/>
+<block line="406" entered="0"/>
+<block line="410" entered="0"/>
+<block line="412" entered="0"/>
+<block line="413" entered="0"/>
+<block line="416" entered="0"/>
+</fn>
+<fn name="CU_set_test_func(CU_pTest,CU_TestFunc)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="6" d_cov="0" d_total="2">
+<probe line="426" column="12" kind="function" event="none"/>
+<probe line="430" kind="decision" event="none"/>
+<probe line="430" column="3" kind="condition" event="none"/>
+<probe line="430" column="18" kind="condition" event="none"/>
+<block line="427" entered="0"/>
+<block line="431" entered="0"/>
+<block line="434" entered="0"/>
+</fn>
+<fn name="CU_get_test(CU_pSuite,const char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="6" d_cov="0" d_total="6">
+<probe line="442" column="8" kind="function" event="none"/>
+<probe line="447" kind="decision" event="none"/>
+<probe line="450" column="4" kind="decision" event="none"/>
+<probe line="453" column="4" kind="decision" event="none"/>
+<block line="443" entered="0"/>
+<block line="448" entered="0"/>
+<block line="450" entered="0"/>
+<block line="451" entered="0"/>
+<block line="453" entered="0"/>
+<block line="454" entered="0"/>
+<block line="457" entered="0"/>
+</fn>
+<fn name="CU_get_test_at_pos(CU_pSuite,unsigned int)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="4" d_cov="0" d_total="4">
+<probe line="465" column="8" kind="function" event="none"/>
+<probe line="470" kind="decision" event="none"/>
+<probe line="473" column="4" kind="decision" event="none"/>
+<block line="466" entered="0"/>
+<block line="471" entered="0"/>
+<block line="473" entered="0"/>
+<block line="474" entered="0"/>
+<block line="477" entered="0"/>
+</fn>
+<fn name="CU_get_test_pos(CU_pSuite,CU_pTest)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="14" d_cov="0" d_total="10">
+<probe line="485" column="11" kind="function" event="none"/>
+<probe line="491" kind="decision" event="none"/>
+<probe line="494" column="4" kind="decision" event="none"/>
+<probe line="497" column="4" kind="decision" event="none"/>
+<probe line="503" kind="decision" event="none"/>
+<probe line="503" column="6" kind="condition" event="none"/>
+<probe line="503" column="28" kind="condition" event="none"/>
+<probe line="507" kind="decision" event="none"/>
+<block line="486" entered="0"/>
+<block line="492" entered="0"/>
+<block line="494" entered="0"/>
+<block line="495" entered="0"/>
+<block line="497" entered="0"/>
+<block line="498" entered="0"/>
+<block line="501" entered="0"/>
+<block line="504" entered="0"/>
+<block line="508" entered="0"/>
+</fn>
+<fn name="CU_get_test_pos_by_name(CU_pSuite,const char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="14" d_cov="0" d_total="10">
+<probe line="517" column="11" kind="function" event="none"/>
+<probe line="523" kind="decision" event="none"/>
+<probe line="526" column="4" kind="decision" event="none"/>
+<probe line="529" column="4" kind="decision" event="none"/>
+<probe line="535" kind="decision" event="none"/>
+<probe line="535" column="6" kind="condition" event="none"/>
+<probe line="535" column="28" kind="condition" event="none"/>
+<probe line="539" kind="decision" event="none"/>
+<block line="518" entered="0"/>
+<block line="524" entered="0"/>
+<block line="526" entered="0"/>
+<block line="527" entered="0"/>
+<block line="529" entered="0"/>
+<block line="530" entered="0"/>
+<block line="533" entered="0"/>
+<block line="536" entered="0"/>
+<block line="540" entered="0"/>
+</fn>
+<fn name="CU_register_nsuites(int,...)" fn_cov="1" fn_total="1" cd_cov="9" cd_total="12" d_cov="9" d_total="12">
+<probe line="571" column="12" kind="function" event="full"/>
+<probe line="582" column="8" kind="decision" event="full"/>
+<probe line="584" kind="decision" event="true"/>
+<probe line="585" column="5" kind="decision" event="full"/>
+<probe line="586" kind="decision" event="true"/>
+<probe line="587" column="33" kind="decision" event="full"/>
+<probe line="588" kind="decision" event="false"/>
+<block line="572" entered="1"/>
+<block line="583" entered="1"/>
+<block line="585" entered="1"/>
+<block line="586" entered="1"/>
+<block line="587" entered="1"/>
+<block line="588" entered="1"/>
+<block line="589" entered="0"/>
+<block line="594" entered="0"/>
+</fn>
+<fn name="CU_register_suites(CU_SuiteInfo[])" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="603" column="12" kind="function" event="full"/>
+<block line="604" entered="1"/>
+</fn>
+<fn name="cleanup_test_registry(CU_pTestRegistry)" fn_cov="1" fn_total="1" cd_cov="2" cd_total="2" d_cov="2" d_total="2">
+<probe line="627" column="10" kind="function" event="full"/>
+<probe line="635" kind="decision" event="full"/>
+<block line="628" entered="1"/>
+<block line="636" entered="1"/>
+</fn>
+<fn name="create_suite(const char*,CU_InitializeFunc,CU_CleanupFunc,CU_SetUpFunc,CU_TearDownFunc)" fn_cov="1" fn_total="1" cd_cov="2" cd_total="4" d_cov="2" d_total="4">
+<probe line="663" column="15" kind="function" event="full"/>
+<probe line="669" kind="decision" event="true"/>
+<probe line="671" kind="decision" event="true"/>
+<block line="664" entered="1"/>
+<block line="670" entered="1"/>
+<block line="672" entered="1"/>
+<block line="684" entered="0"/>
+</fn>
+<fn name="cleanup_suite(CU_pSuite)" fn_cov="1" fn_total="1" cd_cov="3" cd_total="4" d_cov="3" d_total="4">
+<probe line="703" column="10" kind="function" event="full"/>
+<probe line="711" kind="decision" event="full"/>
+<probe line="719" kind="decision" event="true"/>
+<block line="704" entered="1"/>
+<block line="712" entered="1"/>
+<block line="720" entered="1"/>
+</fn>
+<fn name="insert_suite(CU_pTestRegistry,CU_pSuite)" fn_cov="1" fn_total="1" cd_cov="1" cd_total="4" d_cov="1" d_total="4">
+<probe line="740" column="10" kind="function" event="full"/>
+<probe line="755" kind="decision" event="true"/>
+<probe line="761" kind="decision" event="none"/>
+<block line="741" entered="1"/>
+<block line="756" entered="1"/>
+<block line="761" entered="0"/>
+<block line="762" entered="0"/>
+</fn>
+<fn name="create_test(const char*,CU_TestFunc)" fn_cov="1" fn_total="1" cd_cov="2" cd_total="4" d_cov="2" d_total="4">
+<probe line="785" column="14" kind="function" event="full"/>
+<probe line="791" kind="decision" event="true"/>
+<probe line="793" kind="decision" event="true"/>
+<block line="786" entered="1"/>
+<block line="792" entered="1"/>
+<block line="794" entered="1"/>
+<block line="802" entered="0"/>
+</fn>
+<fn name="cleanup_test(CU_pTest)" fn_cov="1" fn_total="1" cd_cov="1" cd_total="2" d_cov="1" d_total="2">
+<probe line="820" column="10" kind="function" event="full"/>
+<probe line="824" kind="decision" event="true"/>
+<block line="821" entered="1"/>
+<block line="825" entered="1"/>
+</fn>
+<fn name="insert_test(CU_pSuite,CU_pTest)" fn_cov="1" fn_total="1" cd_cov="4" cd_total="4" d_cov="4" d_total="4">
+<probe line="845" column="10" kind="function" event="full"/>
+<probe line="860" kind="decision" event="full"/>
+<probe line="865" kind="decision" event="full"/>
+<block line="846" entered="1"/>
+<block line="861" entered="1"/>
+<block line="865" entered="1"/>
+<block line="866" entered="1"/>
+</fn>
+<fn name="suite_exists(CU_pTestRegistry,const char*)" fn_cov="1" fn_total="1" cd_cov="1" cd_total="8" d_cov="1" d_total="4">
+<probe line="884" column="13" kind="function" event="full"/>
+<probe line="892" kind="decision" event="false"/>
+<probe line="893" kind="decision" event="none"/>
+<probe line="893" column="3" kind="condition" event="none"/>
+<probe line="893" column="26" kind="condition" event="none"/>
+<block line="885" entered="1"/>
+<block line="893" entered="0"/>
+<block line="894" entered="0"/>
+</fn>
+<fn name="test_exists(CU_pSuite,const char*)" fn_cov="1" fn_total="1" cd_cov="5" cd_total="8" d_cov="3" d_total="4">
+<probe line="911" column="13" kind="function" event="full"/>
+<probe line="919" kind="decision" event="full"/>
+<probe line="920" kind="decision" event="false"/>
+<probe line="920" column="3" kind="condition" event="true"/>
+<probe line="920" column="25" kind="condition" event="false"/>
+<block line="912" entered="1"/>
+<block line="920" entered="1"/>
+<block line="921" entered="0"/>
+</fn>
+<fn name="CU_create_new_registry(void)" fn_cov="1" fn_total="1" cd_cov="1" cd_total="2" d_cov="1" d_total="2">
+<probe line="932" column="16" kind="function" event="full"/>
+<probe line="935" kind="decision" event="true"/>
+<block line="933" entered="1"/>
+<block line="936" entered="1"/>
+</fn>
+<fn name="CU_destroy_existing_registry(CU_pTestRegistry*)" fn_cov="1" fn_total="1" cd_cov="1" cd_total="2" d_cov="1" d_total="2">
+<probe line="945" column="4" kind="function" event="full"/>
+<probe line="951" kind="decision" event="true"/>
+<block line="946" entered="1"/>
+<block line="952" entered="1"/>
+</fn>
+<fn name="CU_get_suite_by_name(const char*,CU_pTestRegistry)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="8" d_cov="0" d_total="4">
+<probe line="959" column="9" kind="function" event="none"/>
+<probe line="968" kind="decision" event="none"/>
+<probe line="969" kind="decision" event="none"/>
+<probe line="969" column="3" kind="condition" event="none"/>
+<probe line="969" column="24" kind="condition" event="none"/>
+<block line="960" entered="0"/>
+<block line="969" entered="0"/>
+<block line="970" entered="0"/>
+</fn>
+<fn name="CU_get_suite_by_index(unsigned int,CU_pTestRegistry)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="8" d_cov="0" d_total="4">
+<probe line="980" column="9" kind="function" event="none"/>
+<probe line="987" kind="decision" event="none"/>
+<probe line="987" column="3" kind="condition" event="none"/>
+<probe line="987" column="14" kind="condition" event="none"/>
+<probe line="989" column="8" kind="decision" event="none"/>
+<block line="981" entered="0"/>
+<block line="988" entered="0"/>
+<block line="990" entered="0"/>
+</fn>
+<fn name="CU_get_test_by_name(const char*,CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="8" d_cov="0" d_total="4">
+<probe line="998" column="8" kind="function" event="none"/>
+<probe line="1007" kind="decision" event="none"/>
+<probe line="1008" kind="decision" event="none"/>
+<probe line="1008" column="3" kind="condition" event="none"/>
+<probe line="1008" column="24" kind="condition" event="none"/>
+<block line="999" entered="0"/>
+<block line="1008" entered="0"/>
+<block line="1009" entered="0"/>
+</fn>
+<fn name="CU_get_test_by_index(unsigned int,CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="8" d_cov="0" d_total="4">
+<probe line="1019" column="8" kind="function" event="none"/>
+<probe line="1026" kind="decision" event="none"/>
+<probe line="1026" column="3" kind="condition" event="none"/>
+<probe line="1026" column="14" kind="condition" event="none"/>
+<probe line="1028" column="8" kind="decision" event="none"/>
+<block line="1020" entered="0"/>
+<block line="1027" entered="0"/>
+<block line="1029" entered="0"/>
+</fn>
+</src>
+<src name="TestRun.c" mtime="1641395641" fn_cov="15" fn_total="44" cd_cov="56" cd_total="162" d_cov="45" d_total="126">
+<fn name="CU_assertImplementation(int,unsigned int,const char*,const char*,const char*,int)" fn_cov="1" fn_total="1" cd_cov="4" cd_total="8" d_cov="3" d_total="4">
+<probe line="151" column="7" kind="function" event="full"/>
+<probe line="166" kind="decision" event="full"/>
+<probe line="171" kind="decision" event="false"/>
+<probe line="171" column="3" kind="condition" event="false"/>
+<probe line="171" column="22" kind="condition" event="none"/>
+<block line="157" entered="1"/>
+<block line="167" entered="1"/>
+<block line="172" entered="0"/>
+</fn>
+<fn name="CU_set_suite_start_handler(CU_SuiteStartMessageHandler)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="180" column="4" kind="function" event="none"/>
+<block line="181" entered="0"/>
+</fn>
+<fn name="CU_set_test_start_handler(CU_TestStartMessageHandler)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="186" column="4" kind="function" event="full"/>
+<block line="187" entered="1"/>
+</fn>
+<fn name="CU_set_test_complete_handler(CU_TestCompleteMessageHandler)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="192" column="4" kind="function" event="full"/>
+<block line="193" entered="1"/>
+</fn>
+<fn name="CU_set_suite_complete_handler(CU_SuiteCompleteMessageHandler)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="198" column="4" kind="function" event="none"/>
+<block line="199" entered="0"/>
+</fn>
+<fn name="CU_set_all_test_complete_handler(CU_AllTestsCompleteMessageHandler)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="204" column="4" kind="function" event="full"/>
+<block line="205" entered="1"/>
+</fn>
+<fn name="CU_set_suite_init_failure_handler(CU_SuiteInitFailureMessageHandler)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="210" column="4" kind="function" event="full"/>
+<block line="211" entered="1"/>
+</fn>
+<fn name="CU_set_suite_cleanup_failure_handler(CU_SuiteCleanupFailureMessageHandler)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="216" column="4" kind="function" event="full"/>
+<block line="217" entered="1"/>
+</fn>
+<fn name="CU_get_suite_start_handler(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="222" column="27" kind="function" event="none"/>
+<block line="223" entered="0"/>
+</fn>
+<fn name="CU_get_test_start_handler(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="228" column="26" kind="function" event="none"/>
+<block line="229" entered="0"/>
+</fn>
+<fn name="CU_get_test_complete_handler(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="234" column="29" kind="function" event="none"/>
+<block line="235" entered="0"/>
+</fn>
+<fn name="CU_get_suite_complete_handler(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="240" column="30" kind="function" event="none"/>
+<block line="241" entered="0"/>
+</fn>
+<fn name="CU_get_all_test_complete_handler(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="246" column="33" kind="function" event="none"/>
+<block line="247" entered="0"/>
+</fn>
+<fn name="CU_get_suite_init_failure_handler(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="252" column="33" kind="function" event="none"/>
+<block line="253" entered="0"/>
+</fn>
+<fn name="CU_get_suite_cleanup_failure_handler(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="258" column="36" kind="function" event="none"/>
+<block line="259" entered="0"/>
+</fn>
+<fn name="CU_get_number_of_suites_run(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="264" column="11" kind="function" event="none"/>
+<block line="265" entered="0"/>
+</fn>
+<fn name="CU_get_number_of_suites_failed(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="270" column="11" kind="function" event="none"/>
+<block line="271" entered="0"/>
+</fn>
+<fn name="CU_get_number_of_suites_inactive(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="276" column="11" kind="function" event="none"/>
+<block line="277" entered="0"/>
+</fn>
+<fn name="CU_get_number_of_tests_run(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="282" column="11" kind="function" event="none"/>
+<block line="283" entered="0"/>
+</fn>
+<fn name="CU_get_number_of_tests_failed(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="288" column="11" kind="function" event="none"/>
+<block line="289" entered="0"/>
+</fn>
+<fn name="CU_get_number_of_tests_inactive(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="294" column="11" kind="function" event="none"/>
+<block line="295" entered="0"/>
+</fn>
+<fn name="CU_get_number_of_asserts(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="300" column="11" kind="function" event="none"/>
+<block line="301" entered="0"/>
+</fn>
+<fn name="CU_get_number_of_successes(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="306" column="11" kind="function" event="none"/>
+<block line="307" entered="0"/>
+</fn>
+<fn name="CU_get_number_of_failures(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="312" column="11" kind="function" event="none"/>
+<block line="313" entered="0"/>
+</fn>
+<fn name="CU_get_number_of_failure_records(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="318" column="11" kind="function" event="none"/>
+<block line="319" entered="0"/>
+</fn>
+<fn name="CU_get_elapsed_time(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="324" column="6" kind="function" event="none"/>
+<probe line="326" kind="decision" event="none"/>
+<block line="325" entered="0"/>
+<block line="327" entered="0"/>
+<block line="330" entered="0"/>
+</fn>
+<fn name="CU_get_failure_list(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="335" column="17" kind="function" event="none"/>
+<block line="336" entered="0"/>
+</fn>
+<fn name="CU_get_run_summary(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="341" column="14" kind="function" event="full"/>
+<block line="342" entered="1"/>
+</fn>
+<fn name="CU_run_all_tests(void)" fn_cov="1" fn_total="1" cd_cov="8" cd_total="14" d_cov="5" d_total="8">
+<probe line="347" column="12" kind="function" event="full"/>
+<probe line="357" kind="decision" event="false"/>
+<probe line="366" kind="decision" event="full"/>
+<probe line="366" column="6" kind="condition" event="full"/>
+<probe line="366" column="23" kind="condition" event="true"/>
+<probe line="366" column="46" kind="condition" event="none"/>
+<probe line="368" column="7" kind="decision" event="true"/>
+<probe line="376" kind="decision" event="true"/>
+<block line="348" entered="1"/>
+<block line="358" entered="0"/>
+<block line="362" entered="1"/>
+<block line="367" entered="1"/>
+<block line="377" entered="1"/>
+</fn>
+<fn name="CU_run_suite(CU_pSuite)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="4" d_cov="0" d_total="4">
+<probe line="386" column="12" kind="function" event="none"/>
+<probe line="393" kind="decision" event="none"/>
+<probe line="408" kind="decision" event="none"/>
+<block line="387" entered="0"/>
+<block line="394" entered="0"/>
+<block line="398" entered="0"/>
+<block line="409" entered="0"/>
+</fn>
+<fn name="CU_run_test(CU_pSuite,CU_pTest)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="40" d_cov="0" d_total="28">
+<probe line="418" column="12" kind="function" event="none"/>
+<probe line="426" kind="decision" event="none"/>
+<probe line="429" column="4" kind="decision" event="none"/>
+<probe line="432" column="4" kind="decision" event="none"/>
+<probe line="434" kind="decision" event="none"/>
+<probe line="440" column="4" kind="decision" event="none"/>
+<probe line="440" column="7" kind="condition" event="none"/>
+<probe line="440" column="29" kind="condition" event="none"/>
+<probe line="455" kind="decision" event="none"/>
+<probe line="460" kind="decision" event="none"/>
+<probe line="460" column="3" kind="condition" event="none"/>
+<probe line="460" column="36" kind="condition" event="none"/>
+<probe line="462" kind="decision" event="none"/>
+<probe line="474" column="7" kind="decision" event="none"/>
+<probe line="477" kind="decision" event="none"/>
+<probe line="477" column="3" kind="condition" event="none"/>
+<probe line="477" column="33" kind="condition" event="none"/>
+<probe line="479" kind="decision" event="none"/>
+<probe line="485" column="7" kind="decision" event="none"/>
+<probe line="490" kind="decision" event="none"/>
+<probe line="499" kind="decision" event="none"/>
+<block line="419" entered="0"/>
+<block line="427" entered="0"/>
+<block line="429" entered="0"/>
+<block line="430" entered="0"/>
+<block line="432" entered="0"/>
+<block line="433" entered="0"/>
+<block line="435" entered="0"/>
+<block line="440" entered="0"/>
+<block line="441" entered="0"/>
+<block line="445" entered="0"/>
+<block line="456" entered="0"/>
+<block line="462" entered="0"/>
+<block line="463" entered="0"/>
+<block line="473" entered="0"/>
+<block line="479" entered="0"/>
+<block line="480" entered="0"/>
+<block line="491" entered="0"/>
+<block line="500" entered="0"/>
+</fn>
+<fn name="CU_clear_previous_results(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="511" column="4" kind="function" event="full"/>
+<block line="512" entered="1"/>
+</fn>
+<fn name="CU_get_current_suite(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="517" column="9" kind="function" event="none"/>
+<block line="518" entered="0"/>
+</fn>
+<fn name="CU_get_current_test(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="523" column="8" kind="function" event="none"/>
+<block line="524" entered="0"/>
+</fn>
+<fn name="CU_is_test_running(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="529" column="7" kind="function" event="full"/>
+<block line="530" entered="1"/>
+</fn>
+<fn name="CU_set_fail_on_inactive(int)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="535" column="13" kind="function" event="none"/>
+<block line="536" entered="0"/>
+</fn>
+<fn name="CU_get_fail_on_inactive(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="541" column="16" kind="function" event="none"/>
+<block line="542" entered="0"/>
+</fn>
+<fn name="CU_print_run_results(FILE*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="547" column="13" kind="function" event="none"/>
+<probe line="553" kind="decision" event="none"/>
+<block line="548" entered="0"/>
+<block line="554" entered="0"/>
+<block line="558" entered="0"/>
+</fn>
+<fn name="CU_get_run_results_string(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="2" d_cov="0" d_total="2">
+<probe line="563" column="14" kind="function" event="none"/>
+<probe line="613" kind="decision" event="none"/>
+<block line="565" entered="0"/>
+<block line="614" entered="0"/>
+</fn>
+<fn name="add_failure(CU_pFailureRecord*,CU_pRunSummary,CU_FailureType,unsigned int,const char*,const char*,CU_pSuite,CU_pTest)" fn_cov="1" fn_total="1" cd_cov="9" cd_total="18" d_cov="9" d_total="18">
+<probe line="679" column="10" kind="function" event="full"/>
+<probe line="695" kind="decision" event="false"/>
+<probe line="701" kind="decision" event="true"/>
+<probe line="703" kind="decision" event="false"/>
+<probe line="710" kind="decision" event="true"/>
+<probe line="712" kind="decision" event="false"/>
+<probe line="713" kind="decision" event="none"/>
+<probe line="730" kind="decision" event="full"/>
+<probe line="731" kind="decision" event="false"/>
+<probe line="741" kind="decision" event="true"/>
+<block line="687" entered="1"/>
+<block line="696" entered="0"/>
+<block line="702" entered="1"/>
+<block line="704" entered="0"/>
+<block line="711" entered="1"/>
+<block line="713" entered="0"/>
+<block line="714" entered="0"/>
+<block line="731" entered="1"/>
+<block line="732" entered="0"/>
+<block line="738" entered="1"/>
+<block line="742" entered="1"/>
+</fn>
+<fn name="clear_previous_results(CU_pRunSummary,CU_pFailureRecord*)" fn_cov="1" fn_total="1" cd_cov="2" cd_total="2" d_cov="2" d_total="2">
+<probe line="761" column="10" kind="function" event="full"/>
+<probe line="777" kind="decision" event="full"/>
+<block line="762" entered="1"/>
+<block line="778" entered="1"/>
+</fn>
+<fn name="cleanup_failure_list(CU_pFailureRecord*)" fn_cov="1" fn_total="1" cd_cov="4" cd_total="6" d_cov="4" d_total="6">
+<probe line="793" column="10" kind="function" event="full"/>
+<probe line="800" kind="decision" event="full"/>
+<probe line="802" kind="decision" event="true"/>
+<probe line="806" kind="decision" event="true"/>
+<block line="794" entered="1"/>
+<block line="802" entered="1"/>
+<block line="803" entered="1"/>
+<block line="807" entered="1"/>
+</fn>
+<fn name="run_single_suite(CU_pSuite,CU_pRunSummary)" fn_cov="1" fn_total="1" cd_cov="19" cd_total="46" d_cov="12" d_total="32">
+<probe line="833" column="18" kind="function" event="full"/>
+<probe line="851" kind="decision" event="false"/>
+<probe line="856" kind="decision" event="true"/>
+<probe line="859" kind="decision" event="false"/>
+<probe line="859" column="3" kind="condition" event="true"/>
+<probe line="859" column="36" kind="condition" event="false"/>
+<probe line="861" kind="decision" event="none"/>
+<probe line="874" kind="decision" event="full"/>
+<probe line="874" column="6" kind="condition" event="full"/>
+<probe line="874" column="22" kind="condition" event="true"/>
+<probe line="874" column="45" kind="condition" event="none"/>
+<probe line="875" kind="decision" event="true"/>
+<probe line="877" column="7" kind="decision" event="true"/>
+<probe line="881" kind="decision" event="none"/>
+<probe line="889" kind="decision" event="true"/>
+<probe line="899" kind="decision" event="false"/>
+<probe line="899" column="3" kind="condition" event="true"/>
+<probe line="899" column="33" kind="condition" event="false"/>
+<probe line="900" kind="decision" event="none"/>
+<probe line="906" column="7" kind="decision" event="none"/>
+<probe line="914" kind="decision" event="none"/>
+<probe line="922" kind="decision" event="true"/>
+<probe line="923" kind="decision" event="false"/>
+<probe line="935" kind="decision" event="false"/>
+<block line="834" entered="1"/>
+<block line="852" entered="0"/>
+<block line="859" entered="1"/>
+<block line="861" entered="0"/>
+<block line="862" entered="0"/>
+<block line="873" entered="1"/>
+<block line="875" entered="1"/>
+<block line="876" entered="1"/>
+<block line="880" entered="0"/>
+<block line="882" entered="0"/>
+<block line="890" entered="1"/>
+<block line="893" entered="0"/>
+<block line="900" entered="0"/>
+<block line="901" entered="0"/>
+<block line="913" entered="0"/>
+<block line="915" entered="0"/>
+<block line="923" entered="1"/>
+<block line="924" entered="0"/>
+<block line="927" entered="1"/>
+<block line="931" entered="0"/>
+<block line="936" entered="0"/>
+</fn>
+<fn name="run_single_test(CU_pTest,CU_pRunSummary)" fn_cov="1" fn_total="1" cd_cov="10" cd_total="18" d_cov="10" d_total="18">
+<probe line="959" column="18" kind="function" event="full"/>
+<probe line="976" kind="decision" event="true"/>
+<probe line="981" kind="decision" event="true"/>
+<probe line="983" kind="decision" event="true"/>
+<probe line="990" kind="decision" event="true"/>
+<probe line="995" kind="decision" event="true"/>
+<probe line="1003" kind="decision" event="none"/>
+<probe line="1011" kind="decision" event="full"/>
+<probe line="1013" kind="decision" event="full"/>
+<probe line="1024" kind="decision" event="true"/>
+<block line="960" entered="1"/>
+<block line="977" entered="1"/>
+<block line="983" entered="1"/>
+<block line="984" entered="1"/>
+<block line="991" entered="1"/>
+<block line="996" entered="1"/>
+<block line="1002" entered="0"/>
+<block line="1004" entered="0"/>
+<block line="1012" entered="1"/>
+<block line="1014" entered="1"/>
+<block line="1017" entered="1"/>
+<block line="1021" entered="1"/>
+<block line="1025" entered="1"/>
+</fn>
+</src>
+<src name="Util.c" mtime="1641395641" fn_cov="4" fn_total="8" cd_cov="23" cd_total="50" d_cov="13" d_total="28">
+<fn name="get_index(const char)" fn_cov="1" fn_total="1" cd_cov="6" cd_total="8" d_cov="3" d_total="4">
+<probe line="83" column="9" kind="function" event="full"/>
+<probe line="88" column="14" kind="decision" event="full"/>
+<probe line="88" column="14" col_seq="1" kind="condition" event="full"/>
+<probe line="88" column="30" kind="condition" event="true"/>
+<probe line="92" column="7" kind="decision" event="false"/>
+<block line="84" entered="1"/>
+<block line="89" entered="1"/>
+</fn>
+<fn name="CU_translate_special_characters(const char*,char*,size_t)" fn_cov="1" fn_total="1" cd_cov="8" cd_total="14" d_cov="5" d_total="10">
+<probe line="95" column="6" kind="function" event="full"/>
+<probe line="134" kind="decision" event="true"/>
+<probe line="136" kind="decision" event="full"/>
+<probe line="136" column="6" kind="condition" event="true"/>
+<probe line="136" column="18" kind="condition" event="full"/>
+<probe line="138" kind="decision" event="false"/>
+<probe line="139" kind="decision" event="none"/>
+<probe line="155" kind="decision" event="false"/>
+<block line="96" entered="1"/>
+<block line="136" entered="1"/>
+<block line="137" entered="1"/>
+<block line="139" entered="0"/>
+<block line="140" entered="0"/>
+<block line="145" entered="0"/>
+<block line="149" entered="1"/>
+<block line="156" entered="0"/>
+<block line="159" entered="1"/>
+</fn>
+<fn name="CU_translated_strlen(const char*)" fn_cov="1" fn_total="1" cd_cov="3" cd_total="4" d_cov="3" d_total="4">
+<probe line="166" column="6" kind="function" event="full"/>
+<probe line="173" kind="decision" event="full"/>
+<probe line="174" kind="decision" event="false"/>
+<block line="167" entered="1"/>
+<block line="174" entered="1"/>
+<block line="175" entered="0"/>
+<block line="177" entered="1"/>
+</fn>
+<fn name="CU_compare_strings(const char*,const char*)" fn_cov="1" fn_total="1" cd_cov="6" cd_total="8" d_cov="2" d_total="2">
+<probe line="185" column="3" kind="function" event="full"/>
+<probe line="190" kind="decision" event="full"/>
+<probe line="190" column="6" kind="condition" event="true"/>
+<probe line="190" column="22" kind="condition" event="true"/>
+<probe line="190" column="39" kind="condition" event="full"/>
+<block line="186" entered="1"/>
+<block line="191" entered="1"/>
+</fn>
+<fn name="CU_trim(char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="199" column="4" kind="function" event="none"/>
+<block line="200" entered="0"/>
+</fn>
+<fn name="CU_trim_left(char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="10" d_cov="0" d_total="6">
+<probe line="206" column="4" kind="function" event="none"/>
+<probe line="215" column="5" kind="decision" event="none"/>
+<probe line="216" kind="decision" event="none"/>
+<probe line="221" column="5" kind="decision" event="none"/>
+<probe line="221" column="5" col_seq="1" kind="condition" event="none"/>
+<probe line="221" column="19" kind="condition" event="none"/>
+<block line="207" entered="0"/>
+<block line="216" entered="0"/>
+<block line="217" entered="0"/>
+<block line="222" entered="0"/>
+</fn>
+<fn name="CU_trim_right(char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="6" d_cov="0" d_total="2">
+<probe line="227" column="4" kind="function" event="none"/>
+<probe line="237" column="5" kind="decision" event="none"/>
+<probe line="237" column="5" col_seq="1" kind="condition" event="none"/>
+<probe line="237" column="19" kind="condition" event="none"/>
+<block line="228" entered="0"/>
+<block line="238" entered="0"/>
+</fn>
+<fn name="CU_number_width(int)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="245" column="6" kind="function" event="none"/>
+<block line="246" entered="0"/>
+</fn>
+</src>
+</folder>
+</folder>
+<folder name="src" fn_cov="11" fn_total="13" cd_cov="5" cd_total="12" d_cov="5" d_total="12">
+<src name="InitDeinit.c" mtime="1641395641" fn_cov="8" fn_total="8" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<fn name="CmdTestInit(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="4" column="3" kind="function" event="full"/>
+<block line="5" entered="1"/>
+</fn>
+<fn name="CmdTestDeinit(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="9" column="3" kind="function" event="full"/>
+<block line="10" entered="1"/>
+</fn>
+<fn name="CmdTestSetup(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="14" column="4" kind="function" event="full"/>
+<block line="15" entered="1"/>
+</fn>
+<fn name="CmdTestTeardown(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="18" column="4" kind="function" event="full"/>
+<block line="19" entered="1"/>
+</fn>
+<fn name="CmdTest1(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="22" column="4" kind="function" event="full"/>
+<block line="23" entered="1"/>
+</fn>
+<fn name="CmdTest2(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="29" column="4" kind="function" event="full"/>
+<block line="30" entered="1"/>
+</fn>
+<fn name="CmdTest3(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="36" column="4" kind="function" event="full"/>
+<block line="37" entered="1"/>
+</fn>
+<fn name="CmdTest4(void)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="43" column="4" kind="function" event="full"/>
+<block line="44" entered="1"/>
+</fn>
+</src>
+<src name="TestCrossGCC.c" mtime="1641395641" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<fn name="main(int,char*[])" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="16" column="3" kind="function" event="full"/>
+<block line="17" entered="1"/>
+</fn>
+</src>
+<src name="UnitTestmain.c" mtime="1641395641" fn_cov="2" fn_total="4" cd_cov="5" cd_total="12" d_cov="5" d_total="12">
+<fn name="test_main(int,char*[])" fn_cov="1" fn_total="1" cd_cov="5" cd_total="12" d_cov="5" d_total="12">
+<probe line="31" column="3" kind="function" event="full"/>
+<probe line="39" kind="decision" event="false"/>
+<probe line="47" kind="decision" event="true"/>
+<probe line="50" kind="decision" event="true"/>
+<probe line="52" kind="decision" event="true"/>
+<probe line="59" kind="decision" event="true"/>
+<probe line="63" column="4" kind="decision" event="none"/>
+<block line="32" entered="1"/>
+<block line="40" entered="0"/>
+<block line="44" entered="1"/>
+<block line="48" entered="1"/>
+<block line="51" entered="1"/>
+<block line="53" entered="1"/>
+<block line="60" entered="1"/>
+<block line="63" entered="0"/>
+<block line="64" entered="0"/>
+<block line="70" entered="0"/>
+<block line="75" entered="0"/>
+</fn>
+<fn name="runAutomatedTests(char*)" fn_cov="1" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="83" column="10" kind="function" event="full"/>
+<block line="84" entered="1"/>
+</fn>
+<fn name="runBasicTestsOutputToFile(char*)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="92" column="10" kind="function" event="none"/>
+<block line="93" entered="0"/>
+</fn>
+<fn name="runBasicTests(void)" fn_cov="0" fn_total="1" cd_cov="0" cd_total="0" d_cov="0" d_total="0">
+<probe line="101" column="10" kind="function" event="none"/>
+<block line="102" entered="0"/>
+</fn>
+</src>
+</folder>
+</folder>
+</BullseyeCoverage>
