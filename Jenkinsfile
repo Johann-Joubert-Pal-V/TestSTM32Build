@@ -1,9 +1,10 @@
 pipeline{
     agent any
     stages {
-        stage('Cleanup worspace folder') {
+        stage('Testing') {
             steps {
-                cleanWs()
+                echo "Test Stage Step 1"                
+                echo "Test Stage Step 2"                
             }
         }
     }
