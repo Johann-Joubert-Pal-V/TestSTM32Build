@@ -1,8 +1,12 @@
 
 echo "commandline paramters"
 echo "Project name : "$1
+echo "Output configuration : "$2
 
 export PATH=$PATH:/opt/st/stm32cubeide_1.8.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/bin
+
+current_path=$PWD
+echo "Current Path: "$current_path
 
 #TODO add to system path that there is no hardcoded STM32CubeIDE version number
 #/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -import $1 -E PATH=$PATH -E CC="/usr/bin/gcc"
@@ -20,7 +24,8 @@ export PATH=$PATH:/opt/st/stm32cubeide_1.8.0/plugins/com.st.stm32cube.ide.mcu.ex
 
 #generate makefiles for Debug
 #TODO add to system path that there is no hardcoded STM32CubeIDE version number
-/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E PATH=$PATH -E CC=gcc -markerType cdt
+/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E PATH=$PATH -E CC=gcc -E PostBuildCMD="$current_path/../SW-PAL-Vtune/postbuild/postbuild.bash $current_path/../ $1 $2" -markerType cdt
+#/opt/st/stm32cubeide_1.8.0/stm32cubeide -nosplash --launcher.suppressErrors  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data . -cleanBuild $1/Debug -E PATH=$PATH -E CC=gcc -markerType cdt
 
 #generate makefiles for Release
 #TODO add to system path that there is no hardcoded STM32CubeIDE version number
